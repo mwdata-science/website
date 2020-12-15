@@ -1,0 +1,11 @@
+# Importing invoices using json files
+/*.json
+
+# Hugo stuff
+public
+resources
+data/talks.json
+data/keynotes.json
+data/workshops.json
+content/talks/*
+!content/talks/_index.md

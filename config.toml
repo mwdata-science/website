@@ -1,0 +1,74 @@
+baseURL = "https://mwdata.science"
+languageCode = "en-us"
+title = "Malawi Data Science School"
+theme = "mwdata"
+
+[taxonomies]
+  tag = "tags"
+
+[permalinks]
+  post = "/:filename/"
+
+[params]
+  description = "Malawi Data Science School 2021"
+#  contentBackgroundColor = "#fff"
+#  contentTextColor = "#212529"
+#  contentLinkColor = "#007bff"
+#  contentLinkHoverColor = "#0056b3"
+#  navbarBackgroundColor = "#212529"
+#  navbarLinkColor = "rgba(255, 255, 255, 0.75)"
+#  navbarLinkHoverColor = "rgba(255, 255, 255, 1)"
+#  wrapperMaxWidth = "800px"
+  customDateFormat = "Jan 2, 2006"
+  customCodeStyle = true
+  customBlockquoteStyle = true
+  showPostSummary = false
+  includeBootstrapJs = false
+  faviconSafariPinnedTabColor = "#5bbad5"
+  faviconMsApplicationTileColor = "#da532c"
+  faviconThemeColor = "#ffffff"
+
+[menu]
+  [[menu.nav]]
+  name = "Venue"
+  url = "/venue/"
+  weight = 3
+  [[menu.nav]]
+  name = "Registration"
+  url = "/registration/"
+  weight = 2
+  [[menu.nav]]
+  name = "Contribution"
+  url = "/cfp/"
+  weight = 3
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xHTML = false
+  [markup.highlight]
+    codeFences = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 6
+    startLevel = 2
