@@ -28,8 +28,8 @@ We are a group of people from Mzuzu University, Copenhagen University and FAIR (
 
 ## We can use your help
 
-If you want to help us with Django Day, please send us an email to
-[info@django-denmark.org](mailto:info@django-denmark.org).
+If you want to help us with Malawi Data Science School, please send us an email to
+[info@mwdata.science](mailto:info@mwdata.science).
 
 
 # Supporters
@@ -38,8 +38,8 @@ If you want to help us with Django Day, please send us an email to
 {{< imgProc
 img="djangodanmark.png"
 command="Fit"
-options="300x100"
-alt="Magenta"
+options="250x90"
+alt="Django Denmark"
 class="img-sponsor"
 >}}
 </a>
