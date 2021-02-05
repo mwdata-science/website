@@ -7,7 +7,7 @@ draft: false
 ---
 
 
-**This website is currently being updated**
+**This website is currently being updated and information about attendance, scholarships and participation is still pending. Please stay tuned as we continue our organizing efforts!**
 
 Malawi Data Science School 2021 is the first of its kind in Malawi: For a whole week, regional experts, young talents and international guests are meeting around the subject of Data Science.
 
