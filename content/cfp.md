@@ -6,8 +6,12 @@ date: "2020-01-20"
 ## Important Dates 🔥
 
 * Registration Closes: Month dd, 2021 
-* Python week: February 22, 2021 to February 26, 2021
-* Data Science week: March 1, 2021 to March 5, 2021
+* Data Science School: October 25-29 2021
+* Python Week of Code: October 18-22 2021
+
+Proposals for Python Week of Code: This week-long event is a facilitated and planned set of tutorials, but we are most welcoming to proposals and experienced Python people who would be interested in coaching.
+
+The following Call for Proposals focuses on **Week 2: Data Science School**.
 
 ## Overview 🧐
 
