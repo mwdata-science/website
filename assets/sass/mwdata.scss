@@ -131,7 +131,9 @@ article table {
   @extend .table-striped;
 }
 
-article p {
+article p,
+article ul,
+article ol {
   max-width: 600px;
 }
 
