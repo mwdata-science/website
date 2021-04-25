@@ -1,50 +1,70 @@
 ---
 title: "Call for Participation"
-date: "2020-01-20"
+date: "2021-04-25"
 ---
 
 ## Important Dates 🔥
 
-* Registration Closes: Month dd, 2021 
-* Data Science School: October 25-29 2021
-* Python Week of Code: October 18-22 2021
+| When                | What                              |
+| ------------------- | --------------------------------- |
+| May 10, 2021        | Registration opens                |
+| July 15, 2021       | Scholarship window closes         |
+| August 1, 2021      | Scholarships announced            |
+| August 20, 2021     | Registration closes               |
+| September 1, 2021   | Payment for accepted participants |
+| October 18-22, 2021 | Week 1: Python Week of Code       |
+| October 25-29, 2021 | Week 2: Data Science School       |
 
-Proposals for Python Week of Code: This week-long event is a facilitated and planned set of tutorials, but we are most welcoming to proposals and experienced Python people who would be interested in coaching.
 
-The following Call for Proposals focuses on **Week 2: Data Science School**.
+## Registration 🎟️
+
+The event registration is done separately and you may attend either or both weeks.
+
+* Week 1: Python Week of Code
+* Week 2: Data Science School
 
 ## Overview 🧐
 
-We invite African students (bachelor/master/PhD ?) to participate in the First Malawi Data Science School 2021 sponsored by ACM SIGKDD and ?, hosted at Mzuzu University in Malawi.
+We invite students, scholars and professionals to participate in the First Malawi Data Science School 2021 sponsored by ACM SIGKDD and hosted at Mzuzu University, Malawi.
 
-The mission of the school is to provide a stimulating and safe environment, where students can collaborate between them and with lecturers. The school aims at attracting and sustaining students of diverse backgrounds in the field of data science and to support students in their career.
+The mission of the school is to provide a stimulating and safe environment, where a new community is created through new collaborations between participants and facilitators. The school aims at attracting and sustaining participants of diverse backgrounds in the field of data science and to support participants in their career.
 
-The target audience (adjust w.r.t. comment above) is students in Computer Science, ICT, and related fields, from the bachelor and master degrees from MZUNI and other universities in Malawi, but students from other countries in Africa and PhD students will be welcome.
+The target audience are (not in order of priority): a) students in Computer Science, ICT, and related fields, from the bachelor, , master and PhD and Ph.D. programmes from Malawi and the SADC region b) professionals working in the field of Data Science and c) researchers and lecturers who wish to learn Data Science.
 
-The school will offer lectures and labs on data science: the Python week will provide the students with the basic prerequisites on Python programming and the usage of libraries to process, visualize and analyse data; the data science week will focus on fundamentals of machine learning and neural networks. We plan to invite 15 lecturers (3 per day) from universities in Malawi and neighbouring countries.
+The school will offer lectures and labs on data science: the Python week will provide the students with the basic prerequisites on Python programming and the usage of libraries to process, visualize and analyse data; the data science week will focus on fundamentals of machine learning and neural networks. We invite lecturers from universities in Malawi and neighbouring countries.
 
-## Program 📚
 
-TBA
+## Program Week 1: Python Week of Code 📚
+The first module in the event can be attended regardless of participation in Week 2. The event will introduce Python to anyone with a programming background, giving a special focus to Data Science.
+
+The Python Week of Code is co-hosted by Python Namibia and supported by Django Denmark.
+
+
+## Program Week 2: Data Science School 📚
+
+The activity is a 5-day event. Each day targets 2 lectures and 2 lab sessions. Participants will therefore both learn theoretical and practical lessons.
+Day 1: Introduction to data science, data, data manipulation and visualization
+Day 2+3: Statistical and Machine Learning for Data science
+Day 4: Big Data Analytics
+Day 5: Responsible Data Science and Applications
+Participation is rewarded with a certificate of participation. An option for academic credits for the Week 2 will be announced here.
 
 ## Location 🌈
 
-(This might change)
-
-Mzuzu University (MZUNI) is the second national university in Malawi by enactment, with a student population of almost 10,000 and a faculty size of 500 academics, both projected to double by 2030. ICT and Mathematical Sciences are among the key areas of MZUNI’s academic agenda. Data Science and Health Informatics are among the latest programmes to be added to MZUNI’s offers.
-
-Mzuzu City is in the northern region of Malawi and is the third largest urban centre after Lilongwe and Blantyre. Mzuzu enjoys proximity to refreshing places. Lake Malawi with beautiful beaches is only 49 km away. Vwaza Game Reserve and Nyika National Park are close safari spots. 
+The 1-week bootcamp event is held at Mzuzu University’s facilities in Lilongwe, Malawi’s capital city.
+Both weeks of the event are hosted by Mzuzu University (MZUNI), the second national university in Malawi by enactment, with a student population of almost 10,000 and a faculty size of 500 academics, both projected to double by 2030. ICT and Mathematical Sciences are among the key areas of MZUNI’s academic agenda. Data Science and Health Informatics are among the latest programmes to be added to MZUNI’s offers.
 
 ## Organization
 
-Reuben Moyo, Mzuzu University, Malawi
-Stanley Ndebvu, Mzuzu University, Malawi
-Michael Zimba, Mzuzu University, Malawi
-Benjamin Balder Bach, FAIR Danmark, Denmark
-Martin Dybdal, University of Copenhagen, Denmark
-Maria Maistro, University of Copenhagen, Denmark
+* Reuben Moyo, Mzuzu University, Malawi
+* Stanley Ndebvu, Mzuzu University, Malawi
+* Michael Zimba, Mzuzu University, Malawi
+* Maria Maistro, University of Copenhagen, Denmark
+* Benjamin Balder Bach, FAIR Danmark, Denmark
+* Martin Dybdal, University of Copenhagen, Denmark
 
 ## Contact
 
-info@mwdata.science
+* Email: [info@mwdata.science](mailto:info@mwdata.science)
+* Website: [https://mwdata.science](https://mwdata.science)
 

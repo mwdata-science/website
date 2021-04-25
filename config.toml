@@ -32,15 +32,15 @@ theme = "mwdata"
   [[menu.nav]]
   name = "Venue"
   url = "/venue/"
-  weight = 3
+  weight = 1
   [[menu.nav]]
   name = "Registration"
   url = "/registration/"
-  weight = 2
-  [[menu.nav]]
-  name = "Contribution"
-  url = "/cfp/"
   weight = 3
+  [[menu.nav]]
+  name = "Call for Participation"
+  url = "/cfp/"
+  weight = 2
 
 [markup]
   defaultMarkdownHandler = "goldmark"
