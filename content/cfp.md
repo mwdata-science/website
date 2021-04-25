@@ -43,10 +43,15 @@ The Python Week of Code is co-hosted by Python Namibia and supported by Django D
 ## Program Week 2: Data Science School 📚
 
 The activity is a 5-day event. Each day targets 2 lectures and 2 lab sessions. Participants will therefore both learn theoretical and practical lessons.
-Day 1: Introduction to data science, data, data manipulation and visualization
-Day 2+3: Statistical and Machine Learning for Data science
-Day 4: Big Data Analytics
-Day 5: Responsible Data Science and Applications
+
+
+| When    | What                              |
+| --------| --------------------------------- |
+| Day 1   | Introduction to data science, data, data manipulation and visualization |
+| Day 2+3 | Statistical and Machine Learning for Data science |
+| Day 4   | Big Data Analytics                |
+| Day 5   | Responsible Data Science and Applications |
+
 Participation is rewarded with a certificate of participation. An option for academic credits for the Week 2 will be announced here.
 
 ## Location 🌈
