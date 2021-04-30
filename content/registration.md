@@ -7,10 +7,9 @@ draft: false
 
 # Week 1
 
-More info coming up
+Registration will open May 10, 2021
 
 
-# Weel 2
+# Week 2
 
-More info coming up
-
+Registration will open July 1st, 2021
