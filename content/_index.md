@@ -49,7 +49,7 @@ If you want to help us with Malawi Data Science School, please send us an email 
 {{< imgProc
 img="logo-kdd.png"
 command="Fit"
-options="250x90"
+options="280x110"
 alt="SIGKDD"
 class="img-sponsor"
 >}}
@@ -59,7 +59,7 @@ class="img-sponsor"
 {{< imgProc
 img="logo-mzuni.png"
 command="Fit"
-options="250x90"
+options="280x110"
 alt="Mzuzu University"
 class="img-sponsor"
 >}}
@@ -69,8 +69,18 @@ class="img-sponsor"
 {{< imgProc
 img="logo-ku.png"
 command="Fit"
-options="250x90"
+options="280x110"
 alt="Department of Computer Science - Copenhagen University"
+class="img-sponsor"
+>}}
+</a>
+
+<a href="https://pynamibia.herokuapp.com/" target="_blank" class="sponsor">
+{{< imgProc
+img="logo-pynam.png"
+command="Fit"
+options="250x100"
+alt="Python Community of Namibia"
 class="img-sponsor"
 >}}
 </a>
@@ -79,7 +89,7 @@ class="img-sponsor"
 {{< imgProc
 img="djangodanmark.png"
 command="Fit"
-options="250x90"
+options="280x110"
 alt="Django Denmark"
 class="img-sponsor"
 >}}
@@ -90,7 +100,7 @@ class="img-sponsor"
 {{< imgProc
 img="logo-fair.png"
 command="Fit"
-options="250x90"
+options="280x110"
 alt="Fair Allocation of Infotech Resources (FAIR Denmark)"
 class="img-sponsor"
 >}}
