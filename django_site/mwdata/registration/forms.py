@@ -3,9 +3,12 @@ from django import forms
 from . import models
 
 
+BIRTH_YEAR_CHOICES = range(1900, 2010)
+
+
 class RegistrationForm(forms.ModelForm):
     date_of_bith = forms.DateField(
-        widget=forms.SelectDateWidget(attrs={"class": "dob"})
+        widget=forms.SelectDateWidget(years=BIRTH_YEAR_CHOICES, attrs={"class": "dob"})
     )
 
     class Meta:

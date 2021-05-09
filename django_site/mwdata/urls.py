@@ -22,6 +22,10 @@ from django.http.response import HttpResponse
 urlpatterns = [
     path("", lambda _: HttpResponse("Nothing here")),
     path("admin/", admin.site.urls),
-    path("registration/confirmed/", RegistrationConfirm.as_view(), name="registration_confirm"),
+    path(
+        "registration/confirmed/",
+        RegistrationConfirm.as_view(),
+        name="registration_confirm",
+    ),
     path("registration/", RegistrationCreateView.as_view()),
 ]
