@@ -1,0 +1,40 @@
+{{- define "main" -}}
+
+{{- $original := ((site.GetPage "/speakers").Resources.GetMatch (printf "*%s*" .Params.img_name)) -}}
+{{- $new := "" -}}
+{{- $new = $original.Fill "150x150" -}}
+
+<h1>{{ .Title | markdownify }}</h1>
+<img src="{{ $new.Permalink }}" alt="Speaker" class="img-speaker float-right" />
+<h5>
+{{ .Params.speaker_name }}
+
+
+</h5>
+
+<p>
+{{ if .Params.twitter }}
+<a href="https://twitter.com/{{ .Params.twitter }}" target="_blank">🐦 @{{ .Params.twitter }}</a>
+{{ end }}
+{{ if .Params.slides }}
+<a href="{{ .Params.slides }}" target="_blank">🎞️ View slides</a>
+{{ end }}
+</p>
+
+{{ .Content }}
+
+{{- end -}}
+
+
+{{- define "twitter_image" -}}
+{{ "/static/some_preview.png" | absURL }}
+{{- end -}}
+
+{{- define "itemprop_image" -}}
+{{ "/static/some_preview.png" | absURL }}
+{{- end -}}
+
+{{- define "og_image" -}}
+{{ "/static/some_preview.png" | absURL }}
+{{- end -}}
+

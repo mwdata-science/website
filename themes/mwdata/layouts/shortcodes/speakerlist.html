@@ -18,7 +18,7 @@
 
 {{ if .Content }}
   <p>
-  {{ .Content }}
+  {{ .Content | truncate 300 }} <a href="{{ .Permalink }}">Read more »</a>
   </p>
   <div style="clear: both"></div>
 {{ end }}
