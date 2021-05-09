@@ -3,12 +3,11 @@ title: "Code of Conduct"
 date: 2020-01-22
 description: Everybody who participates in Malawi Data Science School in one way or another is required to conform to this Code of Conduct (CoC).
 draft: false
-menu:
-  nav:
-    identifier: "conduct"
-    name: "Conduct"
 weight: 30
+identifier: "conduct"
 ---
+
+# Code of Conduct
 
 This text is adapted from [The Berlin Code of Conduct](https://berlincodeofconduct.org/).
 

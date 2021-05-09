@@ -3,10 +3,10 @@ title: "Malawi Data Science School 2021"
 date: "2020-01-20"
 description: "Malawi's first Data Science School"
 draft: false
-
+identifier: "main"
 ---
 
-# Introduction and updates
+# Welcome!
 
 Malawi Data Science School 2021 is the first of its kind in Malawi: For a whole week, regional experts, young talents and international guests are meeting around the subject of Data Science.
 
@@ -14,8 +14,12 @@ In the lead-up to the **Data Science School**, a week of tutorials in Python and
 
 Read more in our [Call for Participation](/cfp/)
 
+#### Updates
+
 📢 **May 9th 2021** - Facilitators for Week 2 have been announced 📢<br>
 📢 **May 10th 2021** - Today, registrations have opened 📢
+
+To stay updated, follow us on Twitter: [@mwdataschool](https://twitter.com/mwdataschool)
 
 
 # When and where

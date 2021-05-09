@@ -2,7 +2,10 @@
 title: "Venue"
 date: "2020-01-20"
 draft: false
+identifier: "venue" 
 ---
+
+# Venue
 
 The event takes place at Mzuzu University's new Learning Center in Lilongwe. It has capacity both for workshops and lectures.
 

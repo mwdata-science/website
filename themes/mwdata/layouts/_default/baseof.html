@@ -11,19 +11,19 @@
   <meta name="description" content="{{ . }}">
   {{ end }}
 
-  {{ $appleTouchIcon := "apple-touch-icon.png" }}
+  {{ $appleTouchIcon := "/static/apple-touch-icon.png" }}
   <link rel="apple-touch-icon" sizes="180x180" href="{{ $appleTouchIcon | absURL }}">
 
-  {{ $favicon32x32 := "favicon-32x32.png" }}
+  {{ $favicon32x32 := "/static/favicon-32x32.png" }}
   <link rel="icon" type="image/png" sizes="32x32" href="{{ $favicon32x32 | absURL }}">
 
-  {{ $favicon16x16 := "favicon-16x16.png" }}
+  {{ $favicon16x16 := "/static/favicon-16x16.png" }}
   <link rel="icon" type="image/png" sizes="16x16" href="{{ $favicon16x16 | absURL }}">
 
-  {{ $siteWebmanifest := "site.webmanifest" }}
+  {{ $siteWebmanifest := "/static/site.webmanifest" }}
   <link rel="manifest" href="{{ $siteWebmanifest | absURL }}">
 
-  {{ $safariPinnedTab := "safari-pinned-tab.svg" }}
+  {{ $safariPinnedTab := "/static/safari-pinned-tab.svg" }}
   <link rel="mask-icon" href="{{ $safariPinnedTab | absURL }}" color="{{ .Site.Params.faviconSafariPinnedTabColor }}">
 
 
@@ -64,8 +64,8 @@
     <meta property="og:title" content="{{ .Site.Title }}" />
   {{ else }}
     <title>{{ .Title }} | {{ .Site.Title }}</title>
-    <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}">
-    <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+    <meta name="twitter:title" content="{{ .Params.twitter_title | default .Site.Title }} | {{ .Site.Title }}">
+    <meta property="og:title" content="{{ .Params.og_title | default .Site.Title }} | {{ .Site.Title }}" />
   {{ end }}
 
 </head>
@@ -76,7 +76,7 @@
     <div class="container">
     <div>
       <a href="/" title="Go to start page">
-        <img src="/mwdata-logo.svg" alt="Malawi Data Science School logo" style="width: 100%; margin: 20px 0;" />
+        <img src="/static/mwdata-logo.svg" alt="Malawi Data Science School logo" style="width: 100%; margin: 20px 0;" />
       </a>
     </div>
     </div>

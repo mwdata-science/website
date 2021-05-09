@@ -1,7 +1,10 @@
 ---
 title: "Call for Participation"
 date: "2021-04-25"
+identifier: "cfp"
 ---
+
+# Call for Participation
 
 ## Important Dates 🔥
 

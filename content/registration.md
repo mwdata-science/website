@@ -3,6 +3,7 @@ title: "Registration"
 date: 2020-01-23
 description: Registration information for Malawi Data Science School
 draft: false
+identifier: "registration"
 ---
 
 # Week 1: Python Week of Code

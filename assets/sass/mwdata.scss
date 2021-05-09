@@ -192,7 +192,9 @@ a .img-sponsor:hover {
 }
 
 .custom-navbar a:hover,
-.custom-navbar a:focus {
+.custom-navbar a:focus,
+.custom-navbar a.active
+{
   color: white;
   text-decoration: underline;
 }

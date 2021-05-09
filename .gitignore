@@ -1,6 +1,9 @@
 # Importing invoices using json files
 /*.json
 
+*pyc
+__pycache__
+
 # Hugo stuff
 public
 resources
@@ -9,3 +12,10 @@ data/keynotes.json
 data/workshops.json
 content/talks/*
 !content/talks/_index.md
+
+.project
+.pydevproject
+.venv
+
+django_site/db.sqlite3
+django_site/mwdata/settings/local.py
