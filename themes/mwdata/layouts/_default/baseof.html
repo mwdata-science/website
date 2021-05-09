@@ -49,7 +49,7 @@
   <meta name="theme-color" content="{{ .Site.Params.faviconThemeColor }}">
 
   {{ $sass := resources.Get "sass/mwdata.scss" }}
-  {{ $style := $sass | resources.ToCSS | resources.Minify | resources.Fingerprint "sha512" }}
+  {{ $style := $sass | resources.ToCSS | resources.Minify }}
   <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
   {{ if .IsHome }}
