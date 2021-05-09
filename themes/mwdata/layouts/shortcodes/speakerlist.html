@@ -1,7 +1,7 @@
 <br>
 <div style="clear: both"></div>
 
-{{ range sort (where (where site.RegularPages.ByDate "Section" "speakers") "published" "!=" "false") ".Params.talk_date" "asc" }}
+{{ range sort (where (where site.RegularPages.ByDate "Section" "speakers") "published" "!=" "false") ".Params.weight" "asc" }}
 
 <a href="{{ .Permalink }}">
 
@@ -19,7 +19,7 @@
 
 {{ if .Content }}
   <p>
-  {{ .Content | truncate 300 }} <a href="{{ .Permalink }}">Read more »</a>
+  {{ .Content | truncate 300 }} {{ if not .Params.skip_readmore }} <a href="{{ .Permalink }}">Read more »</a>{{ end }}
   </p>
 {{ end }}
 
