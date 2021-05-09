@@ -6,9 +6,10 @@ draft: false
 
 ---
 
-# Introduction
+# Introduction and updates
 
-**This website is currently being updated and information about attendance, scholarships and participation is still pending. Please stay tuned as we continue our organizing efforts!**
+📢 **May 9th 2021** - Facilitators for Week 2 have been announced 📢<br>
+📢 **May 10th 2021** - Today, registrations have opened 📢
 
 Malawi Data Science School 2021 is the first of its kind in Malawi: For a whole week, regional experts, young talents and international guests are meeting around the subject of Data Science.
 
@@ -16,7 +17,6 @@ In the lead-up to the **Data Science School**, a week of tutorials in Python and
 
 Read more in our [Call for Participation](/cfp/)
 
-<div style="clear: both"></div>
 
 # When and where
 
@@ -26,9 +26,17 @@ Read more in our [Call for Participation](/cfp/)
 Events will take place at [Mzuzu University's new Open Distance Learning](/venue/) facility in **Lilongwe, Malawi**. Accommodation will be offered in the nearby surroundings, making it a comfortable, fun and productive stay for everyone involved.
 
 
-# Program
+# Facilitators: Data Science School
 
-Please stay tuned, as the [Call for Participation](/cfp/) is now open and awaiting your proposals!
+{{< speakerlist >}}
+
+
+# Program: Week 2 - Malawi Data Science School
+
+The following is a rough draft of the program. You can find more details about the contents in our [Call for Participation](/cfp/).
+
+{{% include "./static/include/program_table.md" %}}
+
 
 <div style="clear: both"></div>
 

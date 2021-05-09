@@ -1,0 +1,26 @@
+<div style="clear: both"></div>
+{{ range sort (where (where site.RegularPages.ByDate "Section" "speakers") "published" "!=" "false") ".Params.talk_date" "asc" }}
+
+
+<a href="{{ .Permalink }}">
+
+{{- $original := ((site.GetPage "/speakers").Resources.GetMatch (printf "*%s*" .Params.img_name)) -}}
+{{- $new := "" -}}
+{{- $new = $original.Fill "150x150" -}}
+
+<img src="{{ $new.Permalink }}" alt="Speaker" class="img-speaker float-right" />
+
+</a>
+
+
+<h5>{{ .Params.speaker_name }}</h5>
+
+
+{{ if .Content }}
+  <p>
+  {{ .Content }}
+  </p>
+  <div style="clear: both"></div>
+{{ end }}
+
+{{ end }}
