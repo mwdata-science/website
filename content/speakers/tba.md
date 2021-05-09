@@ -7,4 +7,4 @@ weight: 100
 skip_readmore: true
 ---
 
-The program isn't finalized and we will announce a more facilitators shortly. Both for Week 1 and Week 2.
+The program isn't finalized. We have a few more exciting announcements of facilitators coming up - both for Week 1 and Week 2.
