@@ -3,6 +3,7 @@ title: "Michael Zimba"
 speaker_name: "Michael Zimba"
 img_name: "michael.jpeg"
 published: true
+weight: 75
 ---
 
 Michael Zimba studied Electrical and Electronics Engineering (BSc (distinction), University of Malawi, 2005); Information Theory, Coding and Cryptography (MSc (distinction), Mzuzu University, 2009); and Computer Science and Technology ( PhD (Doctor of Engineering), Hunan University, 2012). He is a Senior Lecturer in the Department of Information and Communication Technology, Mzuzu University. From 2018 to 2021 he was the Dean of Faculty of Science, Technology and Innovation. Prior to joining the Department of Information and Communication Technology, Michael was a Lecturer of Electronics, Signal Processing and Communication Physics in the Department of Physics and Electronics, Mzuzu University.

@@ -3,6 +3,7 @@ title: "Rachel Sibande"
 speaker_name: "Rachel Sibande"
 img_name: "rachel.jpeg"
 published: true
+weight: 80
 ---
 
 Rachel Sibande is a Program Director and Long-term independent Consultant with the [Digital Impact Alliance (DIAL)](https://digitalimpactalliance.org/) at the United Nations Foundation. She leads sector-wide demonstrations of initiatives that leverage data for development projects, and leads the development of analytical models of mobile network operator data, geospatial data, and national systems to enhance insights into health and food security modeling, among other sectors.

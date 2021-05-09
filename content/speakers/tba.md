@@ -3,7 +3,7 @@ title: "TBA (To Be Announced)"
 speaker_name: "TBA (To Be Announced)"
 img_name: "tba.png"
 published: true
-weight: 100
+weight: 200
 skip_readmore: true
 ---
 
