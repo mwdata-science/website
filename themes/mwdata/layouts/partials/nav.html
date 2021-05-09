@@ -2,7 +2,7 @@
   <div class="container">
     {{ $currentPage := . }}
     {{ range .Site.Menus.nav }}
-    <a href="{{ .URL }}"{{ if or ($currentPage.IsMenuCurrent "main" .) (eq $currentPage.Params.Identifier .Identifier) }} class="active"{{ end }}>{{ .Name }}</a>
+    <a href="{{ .URL | absURL }}"{{ if or ($currentPage.IsMenuCurrent "main" .) (eq $currentPage.Params.Identifier .Identifier) }} class="active"{{ end }}>{{ .Name }}</a>
     {{ end }}
   </div>
 </nav>

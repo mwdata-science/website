@@ -19,3 +19,4 @@ content/talks/*
 
 django_site/db.sqlite3
 django_site/mwdata/settings/local.py
+django_site/media

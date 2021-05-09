@@ -6,15 +6,17 @@ from django.core.validators import FileExtensionValidator
 class Registration(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
-    
+
     date_of_bith = models.DateField()
-    
+
     gender = models.CharField(choices=[("f", "Female"), ("m", "Male")], max_length=3)
-    
+
     email = models.EmailField()
-    
-    phone = models.CharField(max_length=256, help_text="Please remember country-code if different from +265.")
-    
+
+    phone = models.CharField(
+        max_length=256, help_text="Please remember country-code if different from +265."
+    )
+
     occupation = models.CharField(
         max_length=32,
         choices=[
@@ -23,10 +25,14 @@ class Registration(models.Model):
             ("undergrad", "Student (undergrad)"),
             ("employed", "Employed"),
             ("other", "Other (please fill in)"),
-        ]
+        ],
     )
-    occupation_other = models.CharField(max_length=255, help_text="Occupation, if other than listed", null=True, blank=True)
-
+    occupation_other = models.CharField(
+        max_length=255,
+        help_text="Occupation, if other than listed",
+        null=True,
+        blank=True,
+    )
 
     speciality = models.CharField(
         max_length=32,
@@ -38,9 +44,14 @@ class Registration(models.Model):
             ("health", "Health"),
             ("agriculture", "Agriculture"),
             ("other", "Other (please fill in)"),
-        ]
+        ],
     )
-    speciality_other = models.CharField(max_length=255, help_text="Speciality, if other than listed", null=True, blank=True)
+    speciality_other = models.CharField(
+        max_length=255,
+        help_text="Speciality, if other than listed",
+        null=True,
+        blank=True,
+    )
 
     highest_qualification = models.CharField(
         max_length=32,
@@ -49,17 +60,40 @@ class Registration(models.Model):
             ("masters", "MSc"),
             ("undergrad", "BSc"),
             ("other", "Other (please fill in)"),
-        ]
+        ],
     )
-    highest_qualification_other = models.CharField(max_length=255, help_text="Highest qualification, if other than listed", null=True, blank=True)
+    highest_qualification_other = models.CharField(
+        max_length=255,
+        help_text="Highest qualification, if other than listed",
+        null=True,
+        blank=True,
+    )
 
     country = CountryField(help_text="Country of your current residence.")
 
-    motivation = models.TextField(help_text="What motivates you to participate in this Bootcamp?")
+    motivation = models.TextField(
+        help_text="What motivates you to participate in this Bootcamp?"
+    )
 
-    benefits = models.TextField(help_text="How do you think that your participation in this event will be beneficial for you?")
+    benefits = models.TextField(
+        help_text="How do you think that your participation in this event will be beneficial for you?"
+    )
 
-    scholarship = models.BooleanField(verbose_name="I will apply for a scholarship", help_text="This option will open later.")
-    scholarship_conditioned = models.BooleanField(verbose_name="Participation conditioned by scholarship", help_text="Is your participation in this event reliant on the Scholarship?")
+    scholarship = models.BooleanField(
+        verbose_name="I will apply for a scholarship",
+        help_text="Please check this field if you intend to apply for a scholarship. This option will open later.",
+    )
+    scholarship_conditioned = models.BooleanField(
+        verbose_name="Participation conditioned by scholarship",
+        help_text="Is your participation in this event reliant on the Scholarship?",
+    )
 
-    cv = models.FileField(verbose_name="Curriculum Vitae", validators=[FileExtensionValidator(allowed_extensions=['pdf', "doc", "docx", "odt", "txt"])])
+    cv = models.FileField(
+        verbose_name="Curriculum Vitae",
+        validators=[
+            FileExtensionValidator(
+                allowed_extensions=["pdf", "doc", "docx", "odt", "txt"]
+            )
+        ],
+        upload_to="cv",
+    )

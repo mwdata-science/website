@@ -275,3 +275,26 @@ blockquote,
   font-size: 1em;
   border-left: 5px solid #6c757d;
 }
+
+input,
+select,
+textarea,
+button
+{
+    width: 300px;
+    font-size: 18pt;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea
+{
+    width: 100%;
+    height: 100px;
+}
+
+select.dob
+{
+    width: auto;
+}

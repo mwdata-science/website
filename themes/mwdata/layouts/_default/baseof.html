@@ -76,7 +76,8 @@
     <div class="container">
     <div>
       <a href="/" title="Go to start page">
-        <img src="/static/mwdata-logo.svg" alt="Malawi Data Science School logo" style="width: 100%; margin: 20px 0;" />
+        {{ $logo := "/static/mwdata-logo.svg" }}
+        <img src="{{ $logo | absURL }}" alt="Malawi Data Science School logo" style="width: 100%; margin: 20px 0;" />
       </a>
     </div>
     </div>

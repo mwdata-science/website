@@ -16,11 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from mwdata.registration.views import RegistrationCreateView
+from mwdata.registration.views import RegistrationCreateView, RegistrationConfirm
 from django.http.response import HttpResponse
 
 urlpatterns = [
-    path("", lambda _: HttpResponse("Nothing here")), 
-    path('admin/', admin.site.urls),
+    path("", lambda _: HttpResponse("Nothing here")),
+    path("admin/", admin.site.urls),
+    path("registration/confirmed/", RegistrationConfirm.as_view(), name="registration_confirm"),
     path("registration/", RegistrationCreateView.as_view()),
 ]

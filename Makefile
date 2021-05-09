@@ -9,3 +9,4 @@ django-base-template: hugo
 .ONESHELL:
 hugo:
 	hugo
+	#hugo --baseURL "http://localhost:1313"

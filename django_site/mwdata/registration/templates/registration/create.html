@@ -1,1 +1,29 @@
 {% extends "base.html" %}
+
+{% block title %}Registration{% endblock %}
+
+{% block content %}
+
+<h1>Registration</h1>
+
+<p>
+    To register for the event, please fill in this form before August 20.
+    If you are applying for a scholarship, you need to fill in this form before
+    applying.
+</p>
+
+<p>
+    Applications for scholarships will open separately on June 1st and close on July 15th.
+</p>
+
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+<table>
+{{ form.as_table }}
+</table>
+
+<p>
+    <button type="submit">Send</button>
+</p>
+</form>
+{% endblock %}
