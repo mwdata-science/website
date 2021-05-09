@@ -12,4 +12,6 @@ Registration will open July 1st, 2021
 
 # Week 2: Malawi Data Science School
 
-Registration will open May 10, 2021
+📢 **May 10th 2021: Registration is now open.** 📢
+
+<a href="https://mwdata.science/app/registration/">Go to the registration form</a>

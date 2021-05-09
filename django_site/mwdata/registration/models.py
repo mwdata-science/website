@@ -97,3 +97,6 @@ class Registration(models.Model):
         ],
         upload_to="cv",
     )
+
+    created = models.DateTimeField(auto_now=True)
+    modified = models.DateTimeField(auto_now_add=True)
