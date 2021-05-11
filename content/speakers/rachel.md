@@ -6,8 +6,12 @@ published: true
 weight: 80
 ---
 
-Rachel Sibande is a Program Director and Long-term independent Consultant with the [Digital Impact Alliance (DIAL)](https://digitalimpactalliance.org/) at the United Nations Foundation. She leads sector-wide demonstrations of initiatives that leverage data for development projects, and leads the development of analytical models of mobile network operator data, geospatial data, and national systems to enhance insights into health and food security modeling, among other sectors.
+Rachel is Senior Director at the United Nations Foundation. She leads Big Data, Artificial Intelligence, Machine Learning for development projects  and Digital Transformation work in Africa. 
 
-Ms. Sibande founded Malawi’s first technology hub – [mHub](https://mhubmw.com/). The hub is a social enterprise that has championed the development of technology solutions across sectors such as health, governance, elections monitoring, and human rights in more than six countries. mHub also supports and develops young technology enthusiasts with technical and entrepreneurship skills. Rachel was named as one of Forbes’ most promising young entrepreneurs in 2016, and a New Wealth Creator in 2019. Among other awards and recognitions, she is also an alumna of the State Department’s flagship Young African Leaders Initiative.
+She established Malawi's first technology and Innovation hub, mHub in 2014. The hub provides digital skills training and investment readiness support for emerging entrepreneurs.
 
-Ms. Sibande earned her BSc in Computer Science from the University of Malawi, her MSc in Information Theory, Coding and Cryptography with Distinction from Mzuzu University, and she is currently completing a PhD in Computer Science from Rhodes University in South Africa.
+Rachel became a Google Scholar in 2015,  being a recipient of Google's Anita Borg Award for outstanding computer science students from around the world. She has been listed twice by Forbes as one of Africa's 30 under 30 entrepreneurs in 2016 and as a new wealth creator in 2019. 
+
+In 2018, Mrs. Sibande won the Climate Smart Innovation pan African competition of the Next Einstein Forum after inventing a thermal chemical plant that produces light and gas from maize cobs for mini grids to power rural households in Malawi. 
+
+Rachel holds a PhD in computer Science from Rhodes University in South Africa. She read Cyrptography and Coding Theory for her Masters degree from the Mzuzu University and holds a Bachelors of Science degree majoring in Computer Science and Statistics from the University of Malawi.
