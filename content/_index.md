@@ -1,16 +1,16 @@
 ---
-title: "Malawi Data Science School 2021"
+title: "Malawi Data Science Bootcamp 2021"
 date: "2020-01-20"
-description: "Malawi's first Data Science School"
+description: "Malawi's first Data Science Bootcamp"
 draft: false
 identifier: "main"
 ---
 
 # Welcome!
 
-Malawi Data Science School 2021 is the first of its kind in Malawi: For a whole week, regional experts, young talents and international guests are meeting around the subject of Data Science.
+Malawi Data Science Bootcamp 2021 is the first of its kind in Malawi: For a whole week, regional experts, young talents and international guests are meeting around the subject of Data Science.
 
-In the lead-up to the **Data Science School**, a week of tutorials in Python and Data Science takes place, the **Python Week of Code**.
+In the lead-up to the **Data Science Bootcamp**, a week of tutorials in Python and Data Science takes place, the **Python Week of Code**.
 
 Read more in our [Call for Participation](/cfp/)
 
@@ -19,13 +19,13 @@ Read more in our [Call for Participation](/cfp/)
 📢 **May 9th 2021** - Facilitators for Week 2 have been announced 📢<br>
 📢 **May 10th 2021** - Today, registrations have opened 📢
 
-To stay updated, follow us on Twitter: [@mwdataschool](https://twitter.com/mwdataschool)
+To stay updated, follow us on Twitter: [@mwdatabootcamp](https://twitter.com/mwdatabootcamp)
 
 
 # When and where
 
 * Week 1: October 18-22 Python Week of Code
-* Week 2: October 25-29 Data Science School
+* Week 2: October 25-29 Data Science Bootcamp
 
 Events will take place at [Mzuzu University's new Open Distance Learning](/venue/) facility in **Lilongwe, Malawi**. Accommodation will be offered in the nearby surroundings, making it a comfortable, fun and productive stay for everyone involved.
 
@@ -41,7 +41,7 @@ Events will take place at [Mzuzu University's new Open Distance Learning](/venue
 
 *Program is yet to be announced.*
 
-## Week 2: Malawi Data Science School
+## Week 2: Malawi Data Science Bootcamp
 
 The following is a rough draft of the program. You can find more details about the contents in our [Call for Participation](/cfp/).
 
@@ -56,7 +56,7 @@ We are a group of people from Mzuzu University, Copenhagen University and FAIR (
 
 ## We can use your help
 
-If you want to help us with Malawi Data Science School, please send us an email to
+If you want to help us with Malawi Data Science Bootcamp, please send us an email to
 [info@mwdata.science](mailto:info@mwdata.science).
 
 

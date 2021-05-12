@@ -1,7 +1,7 @@
 ---
 title: "Registration"
 date: 2020-01-23
-description: Registration information for Malawi Data Science School
+description: Registration information for Malawi Data Science Bootcamp
 draft: false
 identifier: "registration"
 ---
@@ -10,7 +10,7 @@ identifier: "registration"
 
 Registration will open July 1st, 2021
 
-# Week 2: Malawi Data Science School
+# Week 2: Malawi Data Science Bootcamp
 
 📢 **May 10th 2021: Registration is now open.** 📢
 

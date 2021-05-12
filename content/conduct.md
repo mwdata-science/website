@@ -1,7 +1,7 @@
 ---
 title: "Code of Conduct"
 date: 2020-01-22
-description: Everybody who participates in Malawi Data Science School in one way or another is required to conform to this Code of Conduct (CoC).
+description: Everybody who participates in Malawi Data Science Bootcamp in one way or another is required to conform to this Code of Conduct (CoC).
 draft: false
 weight: 30
 identifier: "conduct"

@@ -1,6 +1,6 @@
 baseURL = "https://mwdata.science"
 languageCode = "en-us"
-title = "Malawi Data Science School"
+title = "Malawi Data Science Bootcamp"
 theme = "mwdata"
 
 [taxonomies]
@@ -10,7 +10,7 @@ theme = "mwdata"
   post = "/:filename/"
 
 [params]
-  description = "Malawi Data Science School 2021"
+  description = "Malawi Data Science Bootcamp 2021"
 #  contentBackgroundColor = "#fff"
 #  contentTextColor = "#212529"
 #  contentLinkColor = "#007bff"
