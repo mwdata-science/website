@@ -16,8 +16,16 @@ Read more in our [Call for Participation](/cfp/)
 
 #### Updates
 
-📢 **May 9th 2021** - Facilitators for Week 2 have been announced 📢<br>
-📢 **May 10th 2021** - Today, registrations have opened 📢
+📢 **June 11th 2021** - Adjustment in registration process 📢
+
+Registration will close on <u>June 30th</u>. We have already received many requests, big
+thanks to everyone for this support. Once all requests are processed, we will send out
+invitations to apply for scholarship. We expect this to be around mid-July.
+
+People who have already registered will receive a confirmation by email within the next week.
+
+📢 **May 10th 2021** - Today, registrations have opened 📢<br>
+📢 **May 9th 2021** - Facilitators for Week 2 have been announced 📢
 
 To stay updated, follow us on Twitter: [@mwdatabootcamp](https://twitter.com/mwdatabootcamp)
 
