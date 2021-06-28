@@ -48,13 +48,13 @@ $font-family-monospace: 'Roboto Mono', monospace;
 
 //$font-size-base: 1.05rem;
 
-$primary: #113763;
-$secondary: #6B2737;
-$success:  #113763;
-$info:   #CEDFD9;
-$warning:  #ED6A5A;
-$danger:   #6B2737;
-$dark:   #6B2737;
+$primary: #150258;
+$secondary: #F56A1C;
+$success:  #150258;
+$info:  #F2EB00;
+$warning:  #F56A1C;
+$danger:   #D51017;
+$dark:   #150258;
 
 // EBFCFB
 
@@ -75,18 +75,14 @@ h1, h2, h3, h4, h5
 h1
 {
     // font-family: $font-family-monospace;
-    border-color: $info;
-    border-width: 0 0 3px 0;
-    border-style: dotted;
-    // border-radius: 20px;
     color: $primary;
-    padding: 10px 0 15px 0;
+    padding: 10px 0 0px 0;
     //border: 3px dotted $primary;
     // text-transform: uppercase;
     // transform: rotate(-2deg);
     width: auto;
     display: block;
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 .main-update {
@@ -171,7 +167,6 @@ a .img-sponsor:hover {
 
 .mwdata-logo {
   background-color: $primary;
-  border-bottom: 5px dotted white;
 }
 
 
