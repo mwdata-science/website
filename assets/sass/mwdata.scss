@@ -123,12 +123,16 @@ footer
 {
     padding: 20px;
     background-color: $primary;
+    background-image: url('/static/header-background.jpeg');
+    background-repeat: no-repeat;
+    background-position: bottom 0px right 10px; 
     color: #fff;
     font-family: $font-family-monospace;
     font-size: 90%;
-    a, a:active, a:visited {
+    a, a:active, a:visited, a:hover {
         color: #FFF;
         text-decoration: underline;
+        text-shadow: 2px 0px #00000077;
     }
 
    min-height:100px;   /* Height of the footer */
@@ -188,6 +192,9 @@ a .img-sponsor:hover {
 
 .mwdata-logo {
   background-color: $primary;
+  background-image: url('/static/header-background.jpeg');
+  background-repeat: no-repeat;
+  background-position: top 10px center; 
 }
 
 
