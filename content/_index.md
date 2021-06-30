@@ -16,6 +16,12 @@ Read more in our [Call for Participation](/cfp/)
 
 #### Updates
 
+📢 **June 30th 2021** - Registrations are closed 📢
+
+In the coming weeks, we are sending out responses to everyone who have registered.
+We have received just over 100 registrations. Thanks to everyone for your support!
+
+
 📢 **June 11th 2021** - Adjustment in registration process 📢
 
 Registration will close on <u>June 30th</u>. We have already received many requests, big
