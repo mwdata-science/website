@@ -12,9 +12,9 @@ Registration will open July 1st, 2021.
 
 # Week 2: Malawi Data Science Bootcamp
 
-📢 **Registration closes June 30th** 📢<br>
-📢 **May 10th 2021: Registration is now open** 📢
+📢 **June 30th 2021: Registration has closed** 📢<br>
+📢 **May 10th 2021: Registration open** 📢
 
-<a href="https://mwdata.science/app/registration/">Go to the registration form</a>
+<s><a href="https://mwdata.science/app/registration/">Go to the registration form</a></s>
 
 Registering applicants will hear back from us in the weeks after June 30th, 2021 - when the registration window closes.  Registration fee is MK 22,000 ($35) and is paid according to payment terms provided if your registration is accepted.
