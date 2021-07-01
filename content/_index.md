@@ -14,6 +14,14 @@ In the lead-up to the **Data Science Bootcamp**, a week of tutorials in Python a
 
 Read more in our [Call for Participation](/cfp/)
 
+
+# When and where
+
+* Week 1: October 18-22 Python Week of Code
+* Week 2: October 25-29 Data Science Bootcamp
+
+Events will take place at [Mzuzu University's new Open Distance Learning](/venue/) facility in **Lilongwe, Malawi**. Accommodation will be offered in the nearby surroundings, making it a comfortable, fun and productive stay for everyone involved.
+
 #### Updates
 
 📢 **June 30th 2021** - Registrations are closed 📢
@@ -34,15 +42,6 @@ People who have already registered will receive a confirmation by email within t
 📢 **May 9th 2021** - Facilitators for Week 2 have been announced 📢
 
 To stay updated, follow us on Twitter: [@mwdatabootcamp](https://twitter.com/mwdatabootcamp)
-
-
-# When and where
-
-* Week 1: October 18-22 Python Week of Code
-* Week 2: October 25-29 Data Science Bootcamp
-
-Events will take place at [Mzuzu University's new Open Distance Learning](/venue/) facility in **Lilongwe, Malawi**. Accommodation will be offered in the nearby surroundings, making it a comfortable, fun and productive stay for everyone involved.
-
 
 # Facilitators
 
