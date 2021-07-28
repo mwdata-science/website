@@ -1,0 +1,19 @@
+Dear {{ recipient_name }},
+{% block content %}
+{% endblock %}
+
+
+--
+Malawi Data Science Bootcamp 2021
+
+Website - program, updates and information:
+https://mwdata.science
+
+Email:
+info@mwdata.science
+
+Twitter:
+https://twitter.com/mwdatabootcamp
+
+LinkedIn:
+https://linkedin.com/company/mwdata

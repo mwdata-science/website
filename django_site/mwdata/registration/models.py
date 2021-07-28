@@ -4,8 +4,49 @@ from django.core.validators import FileExtensionValidator
 
 
 class Registration(models.Model):
+    """
+    This is the model for people registering for Week 2.
+    """
+
+    registration_total_score = models.PositiveSmallIntegerField(
+        default=0,
+    )
+
+    accepted = models.BooleanField(
+        default=False,
+        help_text="Organizers have accepted the registration"
+    )
+    confirmed = models.BooleanField(
+        default=False,
+        help_text="User has confirmed their acceptance"
+    )
+    waiting_list = models.BooleanField(
+        default=False,
+        help_text="A non-accepted registration is on the waiting list in case there is space",
+    )
+    user_canceled = models.BooleanField(
+        default=False,
+        help_text="User has canceled their registration",
+    )
+
+    access_code = models.CharField(
+        null=True,
+        blank=True,
+        editable=False,
+        help_text="A short random code used to process an application in the URL.",
+        max_length=16,
+    )
+
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
+
+    accepted_email_sent = models.DateTimeField(null=True)
+    waiting_list_email_sent = models.DateTimeField(null=True)
+    rejection_list_email_sent = models.DateTimeField(null=True)
+
+    @property
+    def name(self):
+        return "{} {}".format(self.first_name, self.last_name)
 
     date_of_bith = models.DateField()
 
@@ -100,3 +141,12 @@ class Registration(models.Model):
 
     created = models.DateTimeField(auto_now=True)
     modified = models.DateTimeField(auto_now_add=True)
+
+
+class EmailLog(models.Model):
+    
+    registration = models.ForeignKey(Registration, null=True, blank=True, on_delete=models.SET_NULL)
+    recipient = models.CharField(max_length=32)
+    email_content = models.TextField()
+    
+    sent = models.DateTimeField(auto_now_add=True)

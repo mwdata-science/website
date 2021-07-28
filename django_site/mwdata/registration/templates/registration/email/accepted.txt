@@ -1,0 +1,21 @@
+{% extends "registration/email/base.txt" %}
+
+{% block content %}
+We thank you for your registration and are happy to inform you that we have
+accepted it!
+
+What to do now? We need your confirmation submitted digitally.
+
+{% spaceless %}
+{% if registration.scholarship or registration.scholarship_conditioned %}
+    You have indicated that you are interested in a scholarship, so together with your confirmation, please also fill in a few extra details using the following link:
+{% else %}
+    Use the following link to confirm your participation:
+{% endif %}
+{% endspaceless %}
+
+{{ protocol }}://{{ domain }}{% url "registration_confirmation" access_code=registration.access_code %}
+
+*YOU NEED TO CONFIRM WITHIN 1 WEEK*
+
+{% endblock %}

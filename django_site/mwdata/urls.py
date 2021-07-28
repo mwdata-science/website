@@ -28,4 +28,5 @@ urlpatterns = [
         name="registration_confirm",
     ),
     path("registration/", RegistrationCreateView.as_view()),
+    path("registration/confirmation/<str:access_code>/", RegistrationCreateView.as_view(), name="registration_confirmation"),
 ]
