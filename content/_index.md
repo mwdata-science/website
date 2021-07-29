@@ -24,7 +24,11 @@ Events will take place at [Mzuzu University's new Open Distance Learning](/venue
 
 #### Updates
 
-📢 **June 30th 2021** - Registrations are closed 📢
+📢 **July 30th 2021** - Registration (Week 1) for Python Week of Code <strong>OPEN</strong> 📢
+
+We are happy to announce that the registration for Python Week of Code is open, following the conclusion of the registration for Week 2.
+
+📢 **June 30th 2021** - Registrations (Week 2) are closed 📢
 
 In the coming weeks, we are sending out responses to everyone who have registered.
 We have received just over 100 registrations. Thanks to everyone for your support!
@@ -51,6 +55,12 @@ To stay updated, follow us on Twitter: [@mwdatabootcamp](https://twitter.com/mwd
 # Program
 
 ## Week 1: Python Week of Code
+
+The Python Week of Code happens October 18-22 (Monday-Friday) and will be full days of tutorials, exercises and talks.
+
+The purpose of the event is to provide participants with a basic Python knowledge with a special focus on Data Science.
+This is both a great way to be introduced to Python and Data Science in general and an opportunity to prepare if you
+have been accepted for Week 2's Data Science Bootcamp (but that's NOT a requirement).
 
 *Program is yet to be announced.*
 
