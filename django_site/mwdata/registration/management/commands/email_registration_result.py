@@ -37,7 +37,7 @@ class Command(BaseCommand):
                 from_email="info@mwdata.science",
                 to=[f"{registration.name} <{registration.email}>"],
             )
-            email.send(send_not_print=options.get("dry"))
+            email.send(send_not_print=not options.get("dry"))
             registration.accepted_email_sent = timezone.now()
             registration.save()
 
@@ -49,7 +49,7 @@ class Command(BaseCommand):
                 from_email="info@mwdata.science",
                 to=[f"{registration.name} <{registration.email}>"],
             )
-            email.send(send_not_print=options.get("dry"))
+            email.send(send_not_print=not options.get("dry"))
             registration.rejection_list_email_sent = timezone.now()
             registration.save()
 
@@ -61,7 +61,7 @@ class Command(BaseCommand):
                 from_email="info@mwdata.science",
                 to=[f"{registration.name} <{registration.email}>"],
             )
-            email.send(send_not_print=options.get("dry"))
+            email.send(send_not_print=not options.get("dry"))
             registration.waiting_list_email_sent = timezone.now()
             registration.save()
 
