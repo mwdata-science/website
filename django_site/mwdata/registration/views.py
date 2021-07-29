@@ -23,6 +23,19 @@ class RegistrationConfirm(TemplateView):
     template_name = "registration/create_confirmed.html"
 
 
+class RegistrationWeek1Create(CreateView):
+    model = models.RegistrationWeek1
+    form_class = forms.RegistrationWeek1Form
+    template_name = "registration/create_python_week_of_code.html"
+
+    def get_success_url(self):
+        return reverse("registration:confirmed-week1")
+
+
+class RegistrationWeek1Confirm(TemplateView):
+    template_name = "registration/create_python_week_of_code_confirmed.html"
+
+
 class RegistrationAccepted(UpdateView):
     template_name = "registration/accepted.html"
     model = models.Registration
@@ -38,7 +51,7 @@ class RegistrationAccepted(UpdateView):
 
     def get_success_url(self):
         return reverse(
-            "registration:registration_confirmation_done",
+            "registration:confirmation_done",
             kwargs={"access_code": self.access_code},
         )
 

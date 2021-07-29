@@ -3,8 +3,7 @@ from django.contrib import admin
 from . import models
 
 
-@admin.register(models.Registration)
-class RegistrationAdmin(admin.ModelAdmin):
+class RegistrationAbstractAdmin(admin.ModelAdmin):
     list_display = (
         "get_name",
         "email",
@@ -14,7 +13,7 @@ class RegistrationAdmin(admin.ModelAdmin):
         "waiting_list",
     )
 
-    list_filter = ("accepted", "confirmed", "waiting_list", "scholarship")
+    list_filter = ("accepted", "confirmed", "waiting_list")
 
     list_editable = (
         "registration_total_score",
@@ -28,3 +27,15 @@ class RegistrationAdmin(admin.ModelAdmin):
 
     get_name.admin_order_field = "first_name"
     get_name.short_description = "Name"
+
+
+class RegistrationAdmin(RegistrationAbstractAdmin):
+    list_filter = ("accepted", "confirmed", "waiting_list", "scholarship")
+
+
+class RegistrationWeek1Admin(RegistrationAbstractAdmin):
+    pass
+
+
+admin.site.register(models.Registration, RegistrationAdmin)
+admin.site.register(models.RegistrationWeek1, RegistrationWeek1Admin)

@@ -23,10 +23,10 @@ class Command(BaseCommand):
             accepted=True, confirmed=False
         )
         rejected_registrations = models.Registration.objects.filter(
-            accepted=True, waiting_list=False, confirmed=False
+            accepted=False, waiting_list=False, confirmed=False
         )
         waiting_list_registrations = models.Registration.objects.filter(
-            accepted=True, waiting_list=True, confirmed=False
+            accepted=False, waiting_list=True, confirmed=False
         )
 
         for registration in accepted_registrations:
@@ -42,7 +42,33 @@ class Command(BaseCommand):
             registration.save()
 
         for registration in rejected_registrations:
-            pass
+            print("Sending to: {}".format(registration.email))
+            email = mail.RegistrationNotAccepted(
+                registration=registration,
+                recipient_name=registration.name,
+                from_email="info@mwdata.science",
+                to=[f"{registration.name} <{registration.email}>"],
+            )
+            email.send(send_not_print=options.get("dry"))
+            registration.rejection_list_email_sent = timezone.now()
+            registration.save()
 
         for registration in waiting_list_registrations:
-            pass
+            print("Sending to: {}".format(registration.email))
+            email = mail.RegistrationWaitingList(
+                registration=registration,
+                recipient_name=registration.name,
+                from_email="info@mwdata.science",
+                to=[f"{registration.name} <{registration.email}>"],
+            )
+            email.send(send_not_print=options.get("dry"))
+            registration.waiting_list_email_sent = timezone.now()
+            registration.save()
+
+        print(
+            "Accepted registrations: {}\n".format(accepted_registrations.count())
+            + "Rejected registrations: {}\n".format(rejected_registrations.count())
+            + "Waiting list registrations: {}\n".format(
+                waiting_list_registrations.count()
+            )
+        )

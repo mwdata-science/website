@@ -19,6 +19,39 @@ class RegistrationForm(forms.ModelForm):
         fields = "__all__"
 
 
+class RegistrationWeek1Form(forms.ModelForm):
+    date_of_bith = forms.DateField(
+        widget=forms.SelectDateWidget(years=BIRTH_YEAR_CHOICES, attrs={"class": "dob"})
+    )
+
+    class Meta:
+        model = models.RegistrationWeek1
+        fields = (
+            "first_name",
+            "last_name",
+            "date_of_bith",
+            "gender",
+            "email",
+            "phone",
+            "occupation",
+            "occupation_other",
+            "speciality",
+            "speciality_other",
+            "highest_qualification",
+            "highest_qualification_other",
+            "country",
+            "motivation",
+            "benefits",
+            "cv",
+            "week_2_registration",
+            "motivation",
+            "python_level",
+            "python_knowledge",
+            "programming_level",
+            "programming_knowledge",
+        )
+
+
 class RegistrationAcceptedForm(forms.ModelForm):
 
     confirmed_choice = forms.TypedChoiceField(

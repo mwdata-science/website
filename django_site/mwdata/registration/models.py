@@ -3,10 +3,7 @@ from django.db import models
 from django_countries.fields import CountryField
 
 
-class Registration(models.Model):
-    """
-    This is the model for people registering for Week 2.
-    """
+class RegistrationAbstract(models.Model):
 
     registration_total_score = models.PositiveSmallIntegerField(
         default=0,
@@ -85,29 +82,6 @@ class Registration(models.Model):
         verbose_name="Dietary restrictions",
     )
 
-    scholarship_accomodation = models.BooleanField(
-        default=False,
-        verbose_name="I need accommodation",
-        help_text="We will provide accommodation nearby the venue",
-    )
-
-    scholarship_transportation = models.BooleanField(
-        default=False,
-        verbose_name="I need transportation support",
-    )
-    scholarship_transportation_departure = models.CharField(
-        null=True,
-        blank=True,
-        max_length=1024,
-        verbose_name="Departure place",
-        help_text="Tell us where you are traveling from. Please indicate city/district (if Lilongwe), country",
-    )
-    scholarship_other_needs = models.TextField(
-        blank=True,
-        verbose_name="Other needs",
-        help_text="Please indicate need + cost (MK or $)",
-    )
-
     @property
     def name(self):
         return "{} {}".format(self.first_name, self.last_name)
@@ -184,15 +158,6 @@ class Registration(models.Model):
         help_text="How do you think that your participation in this event will be beneficial for you?"
     )
 
-    scholarship = models.BooleanField(
-        verbose_name="I will apply for a scholarship",
-        help_text="Please check this field if you intend to apply for a scholarship. This option will open later.",
-    )
-    scholarship_conditioned = models.BooleanField(
-        verbose_name="Participation conditioned by scholarship",
-        help_text="Is your participation in this event reliant on the Scholarship?",
-    )
-
     cv = models.FileField(
         verbose_name="Curriculum Vitae",
         validators=[
@@ -205,6 +170,92 @@ class Registration(models.Model):
 
     created = models.DateTimeField(auto_now=True)
     modified = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        abstract = True
+
+
+class Registration(RegistrationAbstract):
+    """
+    This is the model for people registering for Week 2.
+    """
+
+    scholarship_accomodation = models.BooleanField(
+        default=False,
+        verbose_name="I need accommodation",
+        help_text="We will provide accommodation nearby the venue",
+    )
+
+    scholarship_transportation = models.BooleanField(
+        default=False,
+        verbose_name="I need transportation support",
+    )
+    scholarship_transportation_departure = models.CharField(
+        null=True,
+        blank=True,
+        max_length=1024,
+        verbose_name="Departure place",
+        help_text="Tell us where you are traveling from. Please indicate city/district (if Lilongwe), country",
+    )
+    scholarship_other_needs = models.TextField(
+        blank=True,
+        verbose_name="Other needs",
+        help_text="Please indicate need + cost (MK or $)",
+    )
+
+    scholarship = models.BooleanField(
+        verbose_name="I will apply for a scholarship",
+        help_text="Please check this field if you intend to apply for a scholarship. This option will open later.",
+    )
+    scholarship_conditioned = models.BooleanField(
+        verbose_name="Participation conditioned by scholarship",
+        help_text="Is your participation in this event reliant on the Scholarship?",
+    )
+
+
+LEVEL_CHOICES = [
+    ("none", "None"),
+    ("beginner", "Beginner"),
+    ("intermediate", "Intermediate"),
+    ("advanced", "Advanced"),
+]
+
+
+class RegistrationWeek1(RegistrationAbstract):
+
+    week_2_registration = models.BooleanField(
+        default=False,
+        verbose_name="Registered for Week 2",
+        help_text="Indicate whether you registered -- whether you were accepted or not doesn't matter.",
+    )
+
+    motivation = models.TextField(
+        help_text="For example, how do you use Python in your everyday life; how will you be using Data Science; anything else that you find motivating about this event?"
+    )
+
+    python_level = models.CharField(
+        max_length=32,
+        choices=LEVEL_CHOICES,
+        verbose_name="Python level",
+    )
+
+    python_knowledge = models.TextField(
+        verbose_name="Python experience",
+        max_length=300,
+        help_text="If you have existing Python experiences, you can indicate them here (300 characters max)",
+    )
+
+    programming_level = models.CharField(
+        max_length=32,
+        choices=LEVEL_CHOICES,
+        verbose_name="programming skills",
+    )
+
+    programming_knowledge = models.TextField(
+        verbose_name="Programming experience",
+        max_length=300,
+        help_text="If you have existing experiences with general programming, you can indicate them here (300 characters max)",
+    )
 
 
 class EmailLog(models.Model):

@@ -8,6 +8,16 @@ app_name = "registration"
 urlpatterns = [
     path("", views.RegistrationCreate.as_view()),
     path(
+        "python-week-of-code/",
+        views.RegistrationWeek1Create.as_view(),
+        name="registration-week1",
+    ),
+    path(
+        "python-week-of-code/confirmed/",
+        views.RegistrationConfirm.as_view(),
+        name="confirmed-week1",
+    ),
+    path(
         "confirmed/",
         views.RegistrationConfirm.as_view(),
         name="confirmed",
@@ -15,11 +25,11 @@ urlpatterns = [
     path(
         "confirmation/<str:access_code>/",
         views.RegistrationAccepted.as_view(),
-        name="registration_confirmation",
+        name="confirmation",
     ),
     path(
         "confirmation/<str:access_code>/done/",
         views.RegistrationAcceptedConfirm.as_view(),
-        name="registration_confirmation_done",
+        name="confirmation_done",
     ),
 ]

@@ -6,16 +6,22 @@ accepted it!
 
 What to do now? We need your confirmation submitted digitally.
 
-{% spaceless %}
 {% if registration.scholarship or registration.scholarship_conditioned %}
-    You have indicated that you are interested in a scholarship, so together with your confirmation, please also fill in a few extra details using the following link:
+You have indicated that you are interested in a scholarship, so together with
+your confirmation, please also fill in a few extra details using the following
+link:
 {% else %}
-    Use the following link to confirm your participation:
+Use the following link to confirm your participation and supply a few extra details:
 {% endif %}
-{% endspaceless %}
-
 {{ protocol }}://{{ domain }}{% url "registration:confirmation" access_code=registration.access_code %}
 
-*YOU NEED TO CONFIRM WITHIN 1 WEEK*
+*YOU NEED TO CONFIRM NO LATER THAN AUGUST 12TH, AFTER WHICH YOUR SEAT WILL BE OFFERED TO SOMEONE ON A WAITING LIST.*
+
+
+We have also opened up registrations for Python Week of Code, which is an
+opportunity to gain basic Python skills with a special focus on data science.
+You can register on the following link:
+
+{{ protocol }}://{{ domain }}{% url "registration:registration-week1" %}
 
 {% endblock %}
