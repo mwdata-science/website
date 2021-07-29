@@ -2,7 +2,7 @@
 title: "Venue"
 date: "2020-01-20"
 draft: false
-identifier: "venue" 
+identifier: "venue"
 ---
 
 # Venue
@@ -14,40 +14,39 @@ The event takes place at Mzuzu University's new Learning Center in Lilongwe. It 
 
 ## Photos
 
-{{< imgProc 
-img="photo1.jpeg" 
-command="Fill" 
-options="300x300" 
-alt="Main building" 
-class="img-thumbnail" 
+{{< imgProc
+img="photo1.jpeg"
+command="Fill"
+options="300x300"
+alt="Main building"
+class="img-thumbnail"
 >}}
 
-{{< imgProc 
-img="photo2.jpeg" 
-command="Fill" 
-options="300x300" 
-alt="Main building" 
-class="img-thumbnail" 
+{{< imgProc
+img="photo2.jpeg"
+command="Fill"
+options="300x300"
+alt="Main building"
+class="img-thumbnail"
 >}}
 
-{{< imgProc 
-img="photo3.jpeg" 
-command="Fill" 
-options="300x300" 
-alt="Main building" 
-class="img-thumbnail" 
+{{< imgProc
+img="photo3.jpeg"
+command="Fill"
+options="300x300"
+alt="Main building"
+class="img-thumbnail"
 >}}
 
-{{< imgProc 
-img="photo4.jpeg" 
-command="Fill" 
-options="300x300" 
-alt="Main building" 
-class="img-thumbnail" 
+{{< imgProc
+img="photo4.jpeg"
+command="Fill"
+options="300x300"
+alt="Main building"
+class="img-thumbnail"
 >}}
 
 
 ## Getting there, accommodation etc.
 
 We will update this site with information about getting to the venue
-

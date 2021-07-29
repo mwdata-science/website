@@ -136,4 +136,3 @@ alt="Fair Allocation of Infotech Resources (FAIR Denmark)"
 class="img-sponsor"
 >}}
 </a>
-

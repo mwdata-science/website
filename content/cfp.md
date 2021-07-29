@@ -69,4 +69,3 @@ Both weeks of the event are hosted by Mzuzu University (MZUNI), the second natio
 
 * Email: [info@mwdata.science](mailto:info@mwdata.science)
 * Website: [https://mwdata.science](https://mwdata.science)
-

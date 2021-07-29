@@ -1,6 +1,6 @@
+from django.core.validators import FileExtensionValidator
 from django.db import models
 from django_countries.fields import CountryField
-from django.core.validators import FileExtensionValidator
 
 
 class Registration(models.Model):
@@ -13,12 +13,10 @@ class Registration(models.Model):
     )
 
     accepted = models.BooleanField(
-        default=False,
-        help_text="Organizers have accepted the registration"
+        default=False, help_text="Organizers have accepted the registration"
     )
     confirmed = models.BooleanField(
-        default=False,
-        help_text="User has confirmed their acceptance"
+        default=False, help_text="User has confirmed their acceptance"
     )
     waiting_list = models.BooleanField(
         default=False,
@@ -35,6 +33,7 @@ class Registration(models.Model):
         editable=False,
         help_text="A short random code used to process an application in the URL.",
         max_length=16,
+        unique=True,
     )
 
     first_name = models.CharField(max_length=255)
@@ -144,9 +143,11 @@ class Registration(models.Model):
 
 
 class EmailLog(models.Model):
-    
-    registration = models.ForeignKey(Registration, null=True, blank=True, on_delete=models.SET_NULL)
+
+    registration = models.ForeignKey(
+        Registration, null=True, blank=True, on_delete=models.SET_NULL
+    )
     recipient = models.CharField(max_length=32)
     email_content = models.TextField()
-    
+
     sent = models.DateTimeField(auto_now_add=True)

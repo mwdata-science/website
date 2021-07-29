@@ -65,4 +65,3 @@ stage 🎤
 {{- define "og_image" -}}
 {{ if .Params.notes }}{{- $original3 := ((site.GetPage "/sketch-notes").Resources.GetMatch (printf "*%s*" .Params.notes)) -}}{{- $new3 := "" -}}{{- $new3 = $original3.Fill "1200x627" -}}{{ $new3.Permalink }}{{ else }}{{ "/static/some_preview.png" | absURL }}{{ end }}
 {{- end -}}
-

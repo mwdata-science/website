@@ -17,3 +17,28 @@ class RegistrationForm(forms.ModelForm):
     class Meta:
         model = models.Registration
         fields = "__all__"
+
+
+class RegistrationAcceptedForm(forms.ModelForm):
+
+    confirmed = forms.TypedChoiceField(
+        coerce=lambda x: x == "True",
+        choices=(
+            (True, "CONFIRM my participation"),
+            (False, "CANCEL my registration"),
+        ),
+        widget=forms.RadioSelect,
+    )
+
+    def save(self, *args, **kwargs):
+        print(self.cleaned_data)
+        raise
+        registration = super().save(*args, **kwargs)
+        if not self.cleaned_data["confirmed"]:
+            registration.user_canceled = False
+            registration.save()
+        return registration
+
+    class Meta:
+        model = models.Registration
+        fields = ("confirmed",)

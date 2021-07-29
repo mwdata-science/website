@@ -14,7 +14,7 @@ What to do now? We need your confirmation submitted digitally.
 {% endif %}
 {% endspaceless %}
 
-{{ protocol }}://{{ domain }}{% url "registration_confirmation" access_code=registration.access_code %}
+{{ protocol }}://{{ domain }}{% url "registration:confirmation" access_code=registration.access_code %}
 
 *YOU NEED TO CONFIRM WITHIN 1 WEEK*
 

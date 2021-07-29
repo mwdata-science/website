@@ -5,6 +5,7 @@ from django.template import loader
 
 from . import models
 
+
 class BaseEmail(EmailMessage):
 
     template = "registration/email/base.txt"
@@ -36,7 +37,11 @@ class BaseEmail(EmailMessage):
         if send_not_print:
             super().send(fail_silently=False)
             for recipient in self.to:
-                models.EmailLog.objects.create(email_content=self.get_body(), registration=getattr(self, "registration"), recipient=recipient)
+                models.EmailLog.objects.create(
+                    email_content=self.get_body(),
+                    registration=getattr(self, "registration"),
+                    recipient=recipient,
+                )
         else:
             print(self.get_body())
 

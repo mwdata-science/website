@@ -10,6 +10,6 @@ Michael Zimba studied Electrical and Electronics Engineering (BSc (distinction),
 
 At regional level, Michael is a contributing expert on Artificial Intelligence to African Union Development Agency – New Partnership for Africa’s Development (AUDA-NEPAD). AUDA-NEPAD is an arm of African Union High Level Panel on Emerging Technologies, (APET). AUD-NEPAD organizes international seminars and conferences on emerging technologies and their impact.
 
-At national level, Michael is a founding member of the UNDP-led National Innovation Coordinating Team, charged with Science, Technology and Innovation harnessing at national stage. He is involved in organizing discussion fora on STI.   Michael is also engaged by the National Council for Higher Education on ICT-Systems and ICT-education quality assurance. 
+At national level, Michael is a founding member of the UNDP-led National Innovation Coordinating Team, charged with Science, Technology and Innovation harnessing at national stage. He is involved in organizing discussion fora on STI.   Michael is also engaged by the National Council for Higher Education on ICT-Systems and ICT-education quality assurance.
 
 Michael’s teaching and research interests include Data Science; Artificial Intelligence, AI, Machine/Deep Learning; 5G/B5G Mobile and Wireless Communication; Intelligent and Smart Systems; Emerging Technologies, their Impact and Enabling Policies; Digital Multimedia Signal Processing, Analysis and Forensics; System Automation, Modeling and Simulation; Watermarking, Steganography and Cryptology.

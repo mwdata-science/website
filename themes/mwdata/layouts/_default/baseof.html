@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+
   {{ hugo.Generator }}
 
   {{ with .Params.description }}
@@ -84,7 +84,7 @@
 </div>
 
   {{ partial "nav.html" . }}
-  
+
   <div class="container" id="article">
     <article>
       {{ block "main" . }}{{ end }}

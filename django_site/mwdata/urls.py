@@ -14,19 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-
-from mwdata.registration.views import RegistrationCreateView, RegistrationConfirm
 from django.http.response import HttpResponse
+from django.urls import include
+from django.urls import path
 
 urlpatterns = [
     path("", lambda _: HttpResponse("Nothing here")),
     path("admin/", admin.site.urls),
-    path(
-        "registration/confirmed/",
-        RegistrationConfirm.as_view(),
-        name="registration_confirm",
-    ),
-    path("registration/", RegistrationCreateView.as_view()),
-    path("registration/confirmation/<str:access_code>/", RegistrationCreateView.as_view(), name="registration_confirmation"),
+    path("registration/", include("mwdata.registration.urls")),
 ]

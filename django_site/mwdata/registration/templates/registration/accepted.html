@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Registration Accepted{% endblock %}
+
+{% block content %}
+
+<h1>Dear {{ registration.first_name }}</h1>
+
+<form method="POST">
+
+<p>
+    Please confirm your registration.
+</p>
+
+{% if registration.scholarship or registration.scholarship_conditioned %}
+
+<h2>Scholarship</h2>
+
+You have indicated that you are interested in a scholarship.
+
+{% else %}
+
+<h2>Payment</h2>
+
+<p>A registration fee of MK 22,000 is required to be payed to the following account by September 1st:</p>
+
+<pre>
+Bank Name: National Bank of Malawi
+Swift Code: NBMAMWMW
+Account Name:  Mzuzu University Malawi Data Science Project
+Account Number: 1007578896
+</pre>
+
+{% endif %}
+
+<h2>Confirmation</h2>
+
+<div class="form-widgets">
+{{ form.as_p }}
+</div>
+
+<p>
+    <button type="submit">Save</button>
+</p>
+
+
+</form>
+
+
+{% endblock %}
