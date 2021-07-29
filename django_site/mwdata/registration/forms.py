@@ -21,24 +21,60 @@ class RegistrationForm(forms.ModelForm):
 
 class RegistrationAcceptedForm(forms.ModelForm):
 
-    confirmed = forms.TypedChoiceField(
+    confirmed_choice = forms.TypedChoiceField(
         coerce=lambda x: x == "True",
         choices=(
             (True, "CONFIRM my participation"),
             (False, "CANCEL my registration"),
         ),
         widget=forms.RadioSelect,
+        initial=None,
+        label="Confirmation",
     )
 
+    def clean(self):
+        cleaned_data = self.cleaned_data
+        participation_fields = [
+            "tshirt_size",
+            "tshirt_fit",
+            "tshirt_color",
+            "dietary_restrictions",
+        ]
+
+        if not cleaned_data["confirmed_choice"]:
+            if any(cleaned_data[k] for k in participation_fields):
+                raise forms.ValidationError(
+                    "You have chosen to cancel your participation, please leave all other fields blank."
+                )
+        else:
+            if not all(cleaned_data[k] for k in participation_fields):
+                raise forms.ValidationError("You have to fill in all the fields.")
+        return cleaned_data
+
     def save(self, *args, **kwargs):
-        print(self.cleaned_data)
-        raise
         registration = super().save(*args, **kwargs)
-        if not self.cleaned_data["confirmed"]:
-            registration.user_canceled = False
-            registration.save()
+        registration.confirmed = self.cleaned_data["confirmed_choice"]
+        registration.user_canceled = not self.cleaned_data["confirmed_choice"]
+        registration.save()
         return registration
 
     class Meta:
         model = models.Registration
-        fields = ("confirmed",)
+        fields = [
+            "confirmed_choice",
+            "tshirt_size",
+            "tshirt_fit",
+            "tshirt_color",
+            "dietary_restrictions",
+        ]
+
+
+class RegistrationAcceptedScholarshipForm(RegistrationAcceptedForm):
+    class Meta:
+        model = models.Registration
+        fields = RegistrationAcceptedForm.Meta.fields + [
+            "scholarship_accomodation",
+            "scholarship_transportation",
+            "scholarship_transportation_departure",
+            "scholarship_other_needs",
+        ]

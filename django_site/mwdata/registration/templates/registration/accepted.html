@@ -4,19 +4,23 @@
 
 {% block content %}
 
-<h1>Dear {{ registration.first_name }}</h1>
+<h1>Registration confirmation</h1>
 
 <form method="POST">
-
+{% csrf_token %}
 <p>
-    Please confirm your registration.
+    Hello {{ registration.first_name }} 👋 We are happy to confirm that your
+    registration is well-received. Please confirm your registration by completing the
+    following form.
 </p>
 
 {% if registration.scholarship or registration.scholarship_conditioned %}
 
 <h2>Scholarship</h2>
 
-You have indicated that you are interested in a scholarship.
+<p>You have indicated that you are interested in a scholarship. In the fields below,
+you will be asked to provide a few more details about this, and we will get back
+to you with a final confirmation ASAP.</p>
 
 {% else %}
 
@@ -36,7 +40,11 @@ Account Number: 1007578896
 <h2>Confirmation</h2>
 
 <div class="form-widgets">
-{{ form.as_p }}
+
+<table>
+{{ form.as_table }}
+</table>
+
 </div>
 
 <p>

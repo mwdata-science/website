@@ -39,9 +39,74 @@ class Registration(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
 
-    accepted_email_sent = models.DateTimeField(null=True)
-    waiting_list_email_sent = models.DateTimeField(null=True)
-    rejection_list_email_sent = models.DateTimeField(null=True)
+    accepted_email_sent = models.DateTimeField(null=True, editable=False)
+    waiting_list_email_sent = models.DateTimeField(null=True, editable=False)
+    rejection_list_email_sent = models.DateTimeField(null=True, editable=False)
+
+    tshirt_size = models.CharField(
+        null=True,
+        blank=True,
+        max_length=3,
+        verbose_name="T-shirt sizes",
+        choices=[
+            ("xs", "XS"),
+            ("s", "S"),
+            ("m", "M"),
+            ("l", "L"),
+            ("xl", "XL"),
+            ("2xl", "2xl"),
+            ("3xl", "3xl"),
+        ],
+    )
+    tshirt_fit = models.CharField(
+        null=True,
+        blank=True,
+        max_length=16,
+        verbose_name="T-shirt sizes",
+        choices=[
+            ("women", "Women's fit"),
+            ("men", "Men's fit"),
+        ],
+    )
+    tshirt_color = models.CharField(
+        null=True,
+        blank=True,
+        max_length=32,
+        verbose_name="T-shirt color preference",
+        choices=[
+            ("black", "Black"),
+            ("blue", "Blue (event's theme color)"),
+            ("white", "White"),
+            ("grey", "Grey"),
+        ],
+    )
+    dietary_restrictions = models.TextField(
+        blank=True,
+        verbose_name="Dietary restrictions",
+    )
+
+    scholarship_accomodation = models.BooleanField(
+        default=False,
+        verbose_name="I need accommodation",
+        help_text="We will provide accommodation nearby the venue",
+    )
+
+    scholarship_transportation = models.BooleanField(
+        default=False,
+        verbose_name="I need transportation support",
+    )
+    scholarship_transportation_departure = models.CharField(
+        null=True,
+        blank=True,
+        max_length=1024,
+        verbose_name="Departure place",
+        help_text="Tell us where you are traveling from. Please indicate city/district (if Lilongwe), country",
+    )
+    scholarship_other_needs = models.TextField(
+        blank=True,
+        verbose_name="Other needs",
+        help_text="Please indicate need + cost (MK or $)",
+    )
 
     @property
     def name(self):

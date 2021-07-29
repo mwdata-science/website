@@ -17,4 +17,9 @@ urlpatterns = [
         views.RegistrationAccepted.as_view(),
         name="registration_confirmation",
     ),
+    path(
+        "confirmation/<str:access_code>/done/",
+        views.RegistrationAcceptedConfirm.as_view(),
+        name="registration_confirmation_done",
+    ),
 ]
