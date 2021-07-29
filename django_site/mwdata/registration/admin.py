@@ -14,7 +14,7 @@ class RegistrationAdmin(admin.ModelAdmin):
         "waiting_list",
     )
 
-    list_filter = ("accepted", "confirmed", "waiting_list")
+    list_filter = ("accepted", "confirmed", "waiting_list", "scholarship")
 
     list_editable = (
         "registration_total_score",
