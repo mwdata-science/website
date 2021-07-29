@@ -23,10 +23,16 @@ class Command(BaseCommand):
             accepted=True, confirmed=False
         )
         rejected_registrations = models.Registration.objects.filter(
-            accepted=False, waiting_list=False, confirmed=False
+            accepted=False,
+            waiting_list=False,
+            confirmed=False,
+            rejection_list_email_sent=None,
         )
         waiting_list_registrations = models.Registration.objects.filter(
-            accepted=False, waiting_list=True, confirmed=False
+            accepted=False,
+            waiting_list=True,
+            confirmed=False,
+            rejection_list_email_sent=None,
         )
 
         for registration in accepted_registrations:
