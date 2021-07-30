@@ -10,11 +10,13 @@ identifier: "cfp"
 
 | When                | What                              |
 | ------------------- | --------------------------------- |
-| May 10, 2021        | Registration opens                |
+| May 10, 2021        | Registration Week 2 opens         |
 | July 15, 2021       | Scholarship window closes         |
-| August 1, 2021      | Scholarships announced            |
-| August 20, 2021     | Registration closes               |
-| September 1, 2021   | Payment for accepted participants |
+| July 30, 2021       | Registration closes               |
+| July 30, 2021       | Registration Week 1 (Python Week of Code) opens   |
+| August 5, 2021      | Scholarships announced            |
+| September 1, 2021   | Registration Week 1 (Python Week of Code) closes  |
+| September 1, 2021   | Payment deadline for accepted participants Week 2 |
 | October 18-22, 2021 | Week 1: Python Week of Code       |
 | October 25-29, 2021 | Week 2: Data Science Bootcamp     |
 
