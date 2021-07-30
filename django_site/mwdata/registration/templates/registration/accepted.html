@@ -9,9 +9,9 @@
 <form method="POST">
 {% csrf_token %}
 <p>
-    Hello {{ registration.first_name }} 👋 We are happy to confirm that your
-    registration is well-received. Please confirm your registration by completing the
-    following form.
+    Hello {{ registration.first_name }} 👋 We thank you for your registration
+    and are happy to inform you that we have accepted it! Please confirm your
+    registration by completing the following form.
 </p>
 
 {% if registration.scholarship or registration.scholarship_conditioned %}
