@@ -6,6 +6,23 @@ identifier: "cfp"
 
 # Call for Participation
 
+## Registration 🎟️
+
+The event registration is done separately and you may attend either or both weeks.
+
+* Week 1: Python Week of Code (open)
+* Week 2: Data Science Bootcamp (closed)
+
+## Overview 🧐
+
+We invite students, scholars and professionals to participate in the First Malawi Data Science Bootcamp 2021 sponsored by ACM SIGKDD and hosted at Mzuzu University, Malawi.
+
+The mission of the bootcamp is to provide a stimulating and safe environment, where a new community is created through new collaborations between participants and facilitators. The bootcamp aims at attracting and sustaining participants of diverse backgrounds in the field of data science and to support participants in their career.
+
+The target audience are (not in order of priority): a) students in Computer Science, ICT, and related fields, from the bachelor, , master and PhD and Ph.D. programmes from Malawi and the SADC region b) professionals working in the field of Data Science and c) researchers and lecturers who wish to learn Data Science.
+
+The bootcamp will offer lectures and labs on data science: the Python week will provide the students with the basic prerequisites on Python programming and the usage of libraries to process, visualize and analyse data; the data science week will focus on fundamentals of machine learning and neural networks. We invite lecturers from universities in Malawi and neighbouring countries.
+
 ## Important Dates 🔥
 
 | When                | What                              |
@@ -19,24 +36,6 @@ identifier: "cfp"
 | September 1, 2021   | Payment deadline for accepted participants Week 2 |
 | October 18-22, 2021 | Week 1: Python Week of Code       |
 | October 25-29, 2021 | Week 2: Data Science Bootcamp     |
-
-
-## Registration 🎟️
-
-The event registration is done separately and you may attend either or both weeks.
-
-* Week 1: Python Week of Code
-* Week 2: Data Science Bootcamp
-
-## Overview 🧐
-
-We invite students, scholars and professionals to participate in the First Malawi Data Science Bootcamp 2021 sponsored by ACM SIGKDD and hosted at Mzuzu University, Malawi.
-
-The mission of the bootcamp is to provide a stimulating and safe environment, where a new community is created through new collaborations between participants and facilitators. The bootcamp aims at attracting and sustaining participants of diverse backgrounds in the field of data science and to support participants in their career.
-
-The target audience are (not in order of priority): a) students in Computer Science, ICT, and related fields, from the bachelor, , master and PhD and Ph.D. programmes from Malawi and the SADC region b) professionals working in the field of Data Science and c) researchers and lecturers who wish to learn Data Science.
-
-The bootcamp will offer lectures and labs on data science: the Python week will provide the students with the basic prerequisites on Python programming and the usage of libraries to process, visualize and analyse data; the data science week will focus on fundamentals of machine learning and neural networks. We invite lecturers from universities in Malawi and neighbouring countries.
 
 
 ## Program Week 1: Python Week of Code 📚
