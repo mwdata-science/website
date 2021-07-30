@@ -8,7 +8,7 @@ identifier: "cfp"
 
 ## Registration 🎟️
 
-The event registration is done separately and you may attend either or both weeks.
+The event [registration](/registration/) is done separately and you may attend either or both weeks.
 
 * Week 1: Python Week of Code (open)
 * Week 2: Data Science Bootcamp (closed)
