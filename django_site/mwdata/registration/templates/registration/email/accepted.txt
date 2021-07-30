@@ -4,7 +4,7 @@
 We thank you for your registration and are happy to inform you that we have
 accepted it!
 
-What to do now? We need your confirmation submitted digitally.
+The next step is important: We need your confirmation submitted digitally.
 
 {% if registration.scholarship or registration.scholarship_conditioned %}
 You have indicated that you are interested in a scholarship, so together with
@@ -15,7 +15,10 @@ Use the following link to confirm your participation and supply a few extra deta
 {% endif %}
 {{ protocol }}://{{ domain }}{% url "registration:confirmation" access_code=registration.access_code %}
 
-*YOU NEED TO CONFIRM NO LATER THAN AUGUST 12TH, AFTER WHICH YOUR SEAT WILL BE OFFERED TO SOMEONE ON A WAITING LIST.*
+*YOU NEED TO CONFIRM NO LATER THAN AUGUST 12TH*
+
+If we do not receive your confirmation before this date, your seat will be
+offered to another participant.
 
 
 We have also opened up registrations for Python Week of Code, which is an
