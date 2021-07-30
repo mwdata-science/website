@@ -8,8 +8,9 @@ identifier: "registration"
 
 # Week 1: Python Week of Code
 
-Participating in Python Week of Code is free of charge. Registration opened July 29th, 2021 and concludes
-latest September 1st, after which everyone is informed.
+[Python Week of Code](/python-week-of-code/) is a physical event. Participating is free of charge.
+Registration opened July 29th, 2021 and concludes latest September 1st, after which everyone is
+informed.
 
 <a href="https://mwdata.science/app/registration/python-week-of-code/">Go to the registration form</a>
 
