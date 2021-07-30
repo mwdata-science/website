@@ -44,8 +44,9 @@ class Command(BaseCommand):
                 to=[f"{registration.name} <{registration.email}>"],
             )
             email.send(send_not_print=not options.get("dry"))
-            registration.accepted_email_sent = timezone.now()
-            registration.save()
+            if not options.get("dry"):
+                registration.accepted_email_sent = timezone.now()
+                registration.save()
 
         for registration in rejected_registrations:
             print("Sending to: {}".format(registration.email))
@@ -56,8 +57,9 @@ class Command(BaseCommand):
                 to=[f"{registration.name} <{registration.email}>"],
             )
             email.send(send_not_print=not options.get("dry"))
-            registration.rejection_list_email_sent = timezone.now()
-            registration.save()
+            if not options.get("dry"):
+                registration.rejection_list_email_sent = timezone.now()
+                registration.save()
 
         for registration in waiting_list_registrations:
             print("Sending to: {}".format(registration.email))
@@ -68,8 +70,9 @@ class Command(BaseCommand):
                 to=[f"{registration.name} <{registration.email}>"],
             )
             email.send(send_not_print=not options.get("dry"))
-            registration.waiting_list_email_sent = timezone.now()
-            registration.save()
+            if not options.get("dry"):
+                registration.waiting_list_email_sent = timezone.now()
+                registration.save()
 
         print(
             "Accepted registrations: {}\n".format(accepted_registrations.count())
