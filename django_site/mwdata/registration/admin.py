@@ -11,6 +11,7 @@ class RegistrationAbstractAdmin(admin.ModelAdmin):
         "accepted",
         "confirmed",
         "waiting_list",
+        "user_canceled",
     )
 
     list_filter = ("accepted", "confirmed", "waiting_list")
@@ -20,6 +21,7 @@ class RegistrationAbstractAdmin(admin.ModelAdmin):
         "accepted",
         "confirmed",
         "waiting_list",
+        "user_canceled",
     )
 
     def get_name(self, obj):
@@ -30,7 +32,13 @@ class RegistrationAbstractAdmin(admin.ModelAdmin):
 
 
 class RegistrationAdmin(RegistrationAbstractAdmin):
-    list_filter = ("accepted", "confirmed", "waiting_list", "scholarship")
+    list_filter = (
+        "accepted",
+        "confirmed",
+        "waiting_list",
+        "scholarship",
+        "user_canceled",
+    )
 
 
 class RegistrationWeek1Admin(RegistrationAbstractAdmin):
