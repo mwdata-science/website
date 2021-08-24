@@ -24,6 +24,11 @@ Events will take place at [Mzuzu University's new Open Distance Learning](/venue
 
 #### Updates
 
+📢 **August 24th 2021** - Python Week of Code program  📢
+
+The headlines of the program for the Python Week of Code have been decided and are announced further down and in our [Call for Partipation](/cfp/).
+Everything is well underway. If you have any questions, don't hesitate to reach out!
+
 📢 **July 30th 2021** - Registration (Week 1) for Python Week of Code <strong>OPEN</strong> 📢
 
 We are happy to announce that the registration for Python Week of Code is open, following the conclusion of the registration for Week 2.
@@ -62,13 +67,13 @@ The purpose of the event is to provide participants with a basic Python knowledg
 This is both a great way to be introduced to Python and Data Science in general and an opportunity to prepare if you
 have been accepted for Week 2's Data Science Bootcamp (but that's NOT a requirement).
 
-*Program is yet to be announced.*
+{{% include "./static/include/week1_program_table.md" %}}
 
 ## Week 2: Malawi Data Science Bootcamp
 
 The following is a rough draft of the program. You can find more details about the contents in our [Call for Participation](/cfp/).
 
-{{% include "./static/include/program_table.md" %}}
+{{% include "./static/include/week2_program_table.md" %}}
 
 
 <div style="clear: both"></div>

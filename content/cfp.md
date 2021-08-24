@@ -43,12 +43,14 @@ The first module in the event can be attended regardless of participation in Wee
 
 The Python Week of Code is co-hosted by Python Namibia and supported by Django Denmark.
 
+{{% include "./static/include/week1_program_table.md" %}}
+
 
 ## Program Week 2: Data Science Bootcamp 📚
 
 The activity is a 5-day event. Each day targets 2 lectures and 2 lab sessions. Participants will therefore both learn theoretical and practical lessons.
 
-{{% include "./static/include/program_table.md" %}}
+{{% include "./static/include/week2_program_table.md" %}}
 
 Participation is rewarded with a certificate of participation. An option for academic credits for the Week 2 will be announced here.
 
