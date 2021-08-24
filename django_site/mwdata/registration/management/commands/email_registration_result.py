@@ -102,7 +102,10 @@ class Command(BaseCommand):
         print(
             "Accepted registrations: {}\n".format(accepted_registrations.count())
             + "Rejected registrations: {}\n".format(rejected_registrations.count())
-            + "Waiting list registrations: {}\n".format(
+            + "Informed waiting list registrations: {}\n".format(
+                waiting_list_accepted.count()
+            )
+            + "Accepted waiting list registrations: {}\n".format(
                 waiting_list_registrations.count()
             )
         )
