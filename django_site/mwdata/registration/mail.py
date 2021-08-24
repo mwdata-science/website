@@ -61,6 +61,21 @@ class RegistrationAccepted(BaseEmail):
         return c
 
 
+class RegistrationWaitingListAccepted(BaseEmail):
+
+    template = "registration/email/accepted_waiting_list.txt"
+    default_subject = "Accepted: Malawi Data Science Bootcamp 2021"
+
+    def __init__(self, *args, **kwargs):
+        self.registration = kwargs.pop("registration")
+        super().__init__(*args, **kwargs)
+
+    def get_context_data(self):
+        c = super().get_context_data()
+        c["registration"] = self.registration
+        return c
+
+
 class RegistrationNotAccepted(BaseEmail):
 
     template = "registration/email/rejected.txt"
