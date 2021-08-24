@@ -47,7 +47,10 @@ class RegistrationAccepted(UpdateView):
         return UpdateView.dispatch(self, request, *args, **kwargs)
 
     def get_object(self):
-        return UpdateView.get_queryset(self).get(access_code=self.access_code)
+        return UpdateView.get_queryset(self).get(
+            access_code=self.access_code,
+            accepted=True,
+        )
 
     def get_success_url(self):
         return reverse(
