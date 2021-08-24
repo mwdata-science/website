@@ -22,6 +22,7 @@ class Command(BaseCommand):
         accepted_registrations = models.Registration.objects.filter(
             accepted=True,
             confirmed=False,
+            waiting_list=False,
             user_canceled=False,
             accepted_email_sent=None,
         )
