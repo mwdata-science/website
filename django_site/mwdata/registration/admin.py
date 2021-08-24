@@ -38,6 +38,7 @@ class RegistrationAdmin(RegistrationAbstractAdmin):
         "waiting_list",
         "scholarship",
         "user_canceled",
+        "scholarship_transportation",
     )
 
 
