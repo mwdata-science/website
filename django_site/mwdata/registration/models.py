@@ -171,6 +171,12 @@ class RegistrationAbstract(models.Model):
     created = models.DateTimeField(auto_now=True)
     modified = models.DateTimeField(auto_now_add=True)
 
+    internal_notes = models.TextField(
+        blank=True,
+        verbose_name="Internal notes",
+        help_text="Notes that are internal, some are auto-generated",
+    )
+
     class Meta:
         abstract = True
 
