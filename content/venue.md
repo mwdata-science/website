@@ -20,6 +20,7 @@ command="Fill"
 options="300x300"
 alt="Main building"
 class="img-thumbnail"
+page="/venue-photos"
 >}}
 
 {{< imgProc
@@ -28,6 +29,7 @@ command="Fill"
 options="300x300"
 alt="Main building"
 class="img-thumbnail"
+page="/venue-photos"
 >}}
 
 {{< imgProc
@@ -36,6 +38,7 @@ command="Fill"
 options="300x300"
 alt="Main building"
 class="img-thumbnail"
+page="/venue-photos"
 >}}
 
 {{< imgProc
@@ -44,7 +47,19 @@ command="Fill"
 options="300x300"
 alt="Main building"
 class="img-thumbnail"
+page="/venue-photos"
 >}}
+
+
+{{< imgProc
+img="photo5.jpeg"
+command="Fill"
+options="300x300"
+alt="Main building"
+class="img-thumbnail"
+page="/venue-photos"
+>}}
+
 
 
 ## Getting there, accommodation etc.

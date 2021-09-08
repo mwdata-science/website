@@ -4,8 +4,11 @@
 {{- $alt := .Get "alt" -}}
 {{- $class := .Get "class" -}}
 {{- $style := .Get "style" -}}
+{{- $page := .Get "page" -}}
 
-{{- $original := .Page.Resources.GetMatch (printf "*%s*" $img) -}}
+{{- $original := (.Site.GetPage $page).Resources.GetMatch (printf "*%s*" $img) -}}
+
+
 {{- $new := "" -}}
 
 {{- if eq $command "Fit"}}

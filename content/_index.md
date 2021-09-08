@@ -76,6 +76,48 @@ The following is a rough draft of the program. You can find more details about t
 {{% include "./static/include/week2_program_table.md" %}}
 
 
+# Venue
+
+The event takes place at Mzuzu University's new Learning Center in Lilongwe. It has capacity both for workshops and lectures.
+
+[About the venue, see it on a map, accommodation options and transportation »](/venue)
+
+{{< imgProc
+img="photo1.jpeg"
+command="Fill"
+options="150x150"
+alt="Main building"
+class="img-thumbnail"
+page="/venue-photos"
+>}}
+
+{{< imgProc
+img="photo2.jpeg"
+command="Fill"
+options="150x150"
+alt="Main building"
+class="img-thumbnail"
+page="/venue-photos"
+>}}
+
+{{< imgProc
+img="photo3.jpeg"
+command="Fill"
+options="150x150"
+alt="Main building"
+class="img-thumbnail"
+page="/venue-photos"
+>}}
+
+{{< imgProc
+img="photo4.jpeg"
+command="Fill"
+options="150x150"
+alt="Main building"
+class="img-thumbnail"
+page="/venue-photos"
+>}}
+
 <div style="clear: both"></div>
 
 # Who are we?
