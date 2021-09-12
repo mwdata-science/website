@@ -43,6 +43,7 @@ class Command(BaseCommand):
                 mail_to_send = mail.RegistrationMassmail(
                     registration=registration,
                     massmail=massmail,
+                    from_email="Malawi Data Science Bootcamp 2021 <info@mwdata.science>",
                     recipient_name=registration.name,
                     to=[f"{registration.name} <{registration.email}>"],
                 )
