@@ -1,4 +1,6 @@
 from django.contrib import admin
+from django.shortcuts import redirect
+from django.template import loader
 
 from . import models
 
@@ -40,11 +42,47 @@ class RegistrationAdmin(RegistrationAbstractAdmin):
         "user_canceled",
         "scholarship_transportation",
     )
+    actions = ("create_massmail",)
+
+    def create_massmail(self, request, queryset):
+        template_string = loader.render_to_string(
+            "registration/email/massmail.txt",
+            {"recipient_name": "{{ registration.first_name }}"},
+        )
+        massmail = models.MassMail.objects.create(text_body=template_string)
+        for registration in queryset:
+            massmail.registrations_week2.add(registration)
+        return redirect("admin:registration_massmail_change", object_id=massmail.id)
+
+    create_massmail.short_description = (
+        "Create a new mass email for selected recipients"
+    )
 
 
 class RegistrationWeek1Admin(RegistrationAbstractAdmin):
-    pass
+    actions = ("create_massmail",)
+
+    def create_massmail(self, request, queryset):
+        template_string = loader.render_to_string(
+            "registration/email/massmail.txt",
+            {"recipient_name": "{{ registration.first_name }}"},
+        )
+        massmail = models.MassMail.objects.create(text_body=template_string)
+        for registration in queryset:
+            massmail.registrations_week1.add(registration)
+        return redirect(
+            "admin:registration_massmail_change", kwargs={"object_id": massmail.id}
+        )
+
+    create_massmail.short_description = (
+        "Create a new mass email for selected recipients"
+    )
+
+
+class MassMailAdmin(admin.ModelAdmin):
+    list_display = ("subject", "created", "schedule_send", "sent", "sending")
 
 
 admin.site.register(models.Registration, RegistrationAdmin)
 admin.site.register(models.RegistrationWeek1, RegistrationWeek1Admin)
+admin.site.register(models.MassMail, MassMailAdmin)

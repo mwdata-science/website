@@ -1,7 +1,9 @@
 from django.conf import settings
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail.message import EmailMessage
+from django.template import Context
 from django.template import loader
+from django.template import Template
 
 from . import models
 
@@ -104,3 +106,23 @@ class RegistrationWaitingList(BaseEmail):
         c = super().get_context_data()
         c["registration"] = self.registration
         return c
+
+
+class RegistrationMassmail(BaseEmail):
+
+    template = "registration/email/massmail.txt"
+
+    def __init__(self, *args, **kwargs):
+        self.registration = kwargs.pop("registration")
+        self.massmail = kwargs.pop("massmail")
+        kwargs.setdefault("subject", self.massmail.subject)
+        super().__init__(*args, **kwargs)
+
+    def get_context_data(self):
+        c = super().get_context_data()
+        c["registration"] = self.registration
+        return c
+
+    def get_body(self):
+        t = Template(self.massmail.text_body)
+        return t.render(Context(self.get_context_data()))

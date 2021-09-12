@@ -1,5 +1,7 @@
+from django.core.exceptions import ValidationError
 from django.core.validators import FileExtensionValidator
 from django.db import models
+from django.utils import timezone
 from django_countries.fields import CountryField
 
 
@@ -180,6 +182,20 @@ class RegistrationAbstract(models.Model):
     class Meta:
         abstract = True
 
+    @property
+    def status(self):
+        if self.confirmed:
+            return "confirmed"
+        elif self.accepted:
+            return "accepted"
+        elif self.waiting_list:
+            return "waiting list"
+        else:
+            return "not accepted"
+
+    def __str__(self):
+        return "{} ({})".format(self.name, self.status)
+
 
 class Registration(RegistrationAbstract):
     """
@@ -217,6 +233,10 @@ class Registration(RegistrationAbstract):
         verbose_name="Participation conditioned by scholarship",
         help_text="Is your participation in this event reliant on the Scholarship?",
     )
+
+    class Meta:
+        verbose_name = "Registration (Week 2)"
+        verbose_name_plural = "Registrations (Week 2)"
 
 
 LEVEL_CHOICES = [
@@ -262,6 +282,57 @@ class RegistrationWeek1(RegistrationAbstract):
         max_length=300,
         help_text="If you have existing experiences with general programming, you can indicate them here (300 characters max)",
     )
+
+    class Meta:
+        verbose_name = "Registration (Week 1)"
+        verbose_name_plural = "Registrations (Week 1)"
+
+
+class MassMail(models.Model):
+    registrations_week1 = models.ManyToManyField(RegistrationWeek1, blank=True)
+    registrations_week2 = models.ManyToManyField(Registration, blank=True)
+
+    subject = models.CharField(
+        max_length=512, default="Malawi Data Science Bootcamp 2021"
+    )
+    text_body = models.TextField(
+        default="",
+        help_text="Allows to use template syntax like {{ registration.first_name }} and such.",
+    )
+
+    created = models.DateTimeField(auto_now=True)
+    modified = models.DateTimeField(auto_now_add=True)
+
+    schedule_send = models.DateTimeField(
+        null=True,
+        blank=True,
+        help_text="Set a date in the future where the email should be sent",
+    )
+
+    sent = models.BooleanField(default=False, editable=False)
+    sending = models.BooleanField(default=False, editable=False)
+
+    def __str__(self):
+        return "Mass-email: {}".format(self.subject)
+
+    def clean(self):
+        if self.schedule_send and self.sent:
+            raise ValidationError(
+                "This email has already been sent. Create a new mass-email instead."
+            )
+
+        if self.schedule_send and not self.sent:
+            if self.schedule_send < timezone.now():
+                raise ValidationError(
+                    {
+                        "schedule_send": (
+                            "Emails must be sent in the future. You cannot "
+                            "change old emails that have already been sent. If "
+                            "you are trying to send the same email again, you "
+                            "have to start over with a new one."
+                        )
+                    }
+                )
 
 
 class EmailLog(models.Model):
