@@ -38,7 +38,7 @@ class Command(BaseCommand):
             registrations = list(massmail.registrations_week1.all()) + list(
                 massmail.registrations_week2.all()
             )
-
+            print("Found emails to send: {}".format(timezone.now()))
             for registration in registrations:
                 mail_to_send = mail.RegistrationMassmail(
                     registration=registration,
@@ -48,6 +48,7 @@ class Command(BaseCommand):
                     to=[f"{registration.name} <{registration.email}>"],
                 )
                 mail_to_send.send(send_not_print=not dry)
+                print(f"Sending to {registration.email}")
 
             if not dry:
                 massmail.sent = True
