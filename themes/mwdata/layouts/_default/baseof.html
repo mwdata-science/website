@@ -48,7 +48,7 @@
 
   <meta name="theme-color" content="{{ .Site.Params.faviconThemeColor }}">
 
-  {{ $sass := resources.Get "sass/mwdata.scss" }}
+  {{ $sass := resources.Get "static/sass/mwdata.scss" }}
   {{ $style := $sass | resources.ToCSS | resources.Minify }}
   <link rel="stylesheet" href="{{ $style.Permalink }}" />
 

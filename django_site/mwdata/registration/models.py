@@ -1,3 +1,6 @@
+import random
+import string
+
 from django.core.exceptions import ValidationError
 from django.core.validators import FileExtensionValidator
 from django.db import models
@@ -179,6 +182,55 @@ class RegistrationAbstract(models.Model):
         help_text="Notes that are internal, some are auto-generated",
     )
 
+    registration_receipt = models.FileField(
+        verbose_name="Bank deposit slip",
+        validators=[
+            FileExtensionValidator(
+                allowed_extensions=["pdf", "doc", "docx", "odt", "jpeg", "png", "jpg"]
+            )
+        ],
+        help_text="For your payment of the registration fee: Before October 1st, provide an image/scan of bank deposit slip (receipt from transfer)",
+        upload_to="receipts",
+        blank=True,
+        null=True,
+    )
+
+    has_laptop = models.BooleanField(
+        default=False,
+        verbose_name="Bringing a laptop",
+        help_text="We encourage to bring your own laptop, such that you can keep software installed after the event and make your own notes etc. Otherwise, computers are available at the event, too",
+    )
+
+    reimbursement_bank_name = models.CharField(
+        max_length=128,
+        verbose_name="Reimbursement bank name",
+        help_text="Name of the bank in which you hold an account (National Bank preferred)",
+        null=True,
+        blank=True,
+    )
+
+    reimbursement_account_owner = models.CharField(
+        max_length=128,
+        verbose_name="Reimbursement account owner",
+        help_text="Name of the account owner, this MUST be you! But please put it correctly",
+        null=True,
+        blank=True,
+    )
+
+    reimbursement_branch_code = models.CharField(
+        max_length=128,
+        verbose_name="Reimbursement branch code",
+        null=True,
+        blank=True,
+    )
+
+    reimbursement_account_number = models.CharField(
+        max_length=128,
+        verbose_name="Reimbursement account number",
+        null=True,
+        blank=True,
+    )
+
     class Meta:
         abstract = True
 
@@ -195,6 +247,14 @@ class RegistrationAbstract(models.Model):
 
     def __str__(self):
         return "{} ({})".format(self.name, self.status)
+
+    def get_access_code(self):
+        if not self.access_code:
+            self.access_code = "".join(
+                random.choice(string.ascii_lowercase + string.digits) for _ in range(12)
+            )
+            self.save()
+        return self.access_code
 
 
 class Registration(RegistrationAbstract):
@@ -319,6 +379,21 @@ class MassMail(models.Model):
         if self.schedule_send and self.sent:
             raise ValidationError(
                 "This email has already been sent. Create a new mass-email instead."
+            )
+
+        try:
+            from .mail import RegistrationMassmail
+
+            mail_object = RegistrationMassmail(
+                recipient_name="Render Test",
+                massmail=self,
+                registration=self.registrations_week1.first()
+                or self.registrations_week2.first(),
+            )
+            mail_object.get_body()
+        except Exception as e:
+            raise ValidationError(
+                f"There was a problem rendering the email template text. The issue is described like this:\n\n{e}"
             )
 
         if self.schedule_send and not self.sent:

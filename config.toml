@@ -1,4 +1,5 @@
-baseURL = "https://mwdata.science"
+# baseURL = "https://mwdata.science"
+# relativeURLs = true
 languageCode = "en-us"
 title = "Malawi Data Science Bootcamp"
 theme = "mwdata"
