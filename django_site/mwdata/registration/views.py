@@ -1,13 +1,20 @@
+from django.contrib.auth.decorators import login_required
 from django.urls.base import reverse
 from django.utils.decorators import method_decorator
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView
 from django.views.generic.edit import UpdateView
+from django.views.static import serve
 from ratelimit.decorators import ratelimit
 
 from . import forms
 from . import models
+
+
+@login_required
+def protected_serve(request, path, file_root=None):
+    return serve(request, path, file_root)
 
 
 class RegistrationCreate(CreateView):
@@ -59,8 +66,10 @@ class RegistrationAccepted(UpdateView):
         )
 
     def get_form_class(self):
-        if self.object.scholarship:
+        if self.object.scholarship and not self.object.scholarship_confirmed:
             return forms.RegistrationAcceptedScholarshipForm
+        if self.object.scholarship_confirmed:
+            return forms.RegistrationAcceptedScholarshipConfirmedForm
         return forms.RegistrationAcceptedForm
 
 

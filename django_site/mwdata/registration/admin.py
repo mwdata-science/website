@@ -6,7 +6,7 @@ from . import models
 
 
 class RegistrationAbstractAdmin(admin.ModelAdmin):
-    list_display = (
+    list_display = [
         "get_name",
         "email",
         "registration_total_score",
@@ -14,17 +14,17 @@ class RegistrationAbstractAdmin(admin.ModelAdmin):
         "confirmed",
         "waiting_list",
         "user_canceled",
-    )
+    ]
 
     list_filter = ("accepted", "confirmed", "waiting_list")
 
-    list_editable = (
+    list_editable = [
         "registration_total_score",
         "accepted",
         "confirmed",
         "waiting_list",
         "user_canceled",
-    )
+    ]
 
     def get_name(self, obj):
         return obj.name
@@ -34,12 +34,15 @@ class RegistrationAbstractAdmin(admin.ModelAdmin):
 
 
 class RegistrationAdmin(RegistrationAbstractAdmin):
+    list_display = RegistrationAbstractAdmin.list_display + ["scholarship_confirmed"]
+    list_editable = RegistrationAbstractAdmin.list_editable + ["scholarship_confirmed"]
     list_filter = (
         "accepted",
         "confirmed",
         "waiting_list",
         "scholarship",
         "user_canceled",
+        "scholarship_confirmed",
         "scholarship_transportation",
     )
     actions = ("create_massmail",)

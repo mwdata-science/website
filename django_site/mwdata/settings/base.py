@@ -123,9 +123,9 @@ STATIC_URL = "/static/"
 
 STATIC_ROOT = BASE_DIR / "static_root"
 MEDIA_ROOT = BASE_DIR / "media"
+MEDIA_URL = "/media/"
 
 STATICFILES_DIRS = [str(BASE_DIR / "mwdata/static")]
-print(str(BASE_DIR / "mwdata/static"))
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",

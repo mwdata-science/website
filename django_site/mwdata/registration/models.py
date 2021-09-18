@@ -294,6 +294,12 @@ class Registration(RegistrationAbstract):
         help_text="Is your participation in this event reliant on the Scholarship?",
     )
 
+    scholarship_confirmed = models.BooleanField(
+        verbose_name="Scholarship confirmed",
+        help_text="Scholarship is confirmed",
+        default=False,
+    )
+
     class Meta:
         verbose_name = "Registration (Week 2)"
         verbose_name_plural = "Registrations (Week 2)"

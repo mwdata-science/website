@@ -4,29 +4,51 @@
 
 {% block content %}
 
-<h1>Registration confirmation</h1>
+{% if not registration.confirmed %}
+<h1>Confirmation form</h1>
+{% else %}
+<h1>Registration update</h1>
+{% endif %}
 
-<form method="POST">
+<form method="POST" enctype="multipart/form-data">
 {% csrf_token %}
+
+{% if not registration.confirmed %}
 <p>
     Hello {{ registration.first_name }} 👋 We thank you for your registration
     and are happy to inform you that we have accepted it! Please confirm your
     registration by completing the following form.
 </p>
+{% else %}
+<p>
+    Hello {{ registration.first_name }} 👋 We thank you for your confirmation,
+    please review and update your registration data below.
+</p>
+{% endif %}
 
 {% if registration.scholarship or registration.scholarship_conditioned %}
 
+{% if not registration.scholarship_confirmed %}
 <h2>Scholarship</h2>
 
 <p>You have indicated that you are interested in a scholarship. In the fields below,
 you will be asked to provide a few more details about this, and we will get back
 to you with a final confirmation ASAP.</p>
 
+
+{% else %}
+
+<h2>Scholarship</h2>
+
+<p>Your scholarship is confirmed, but please fill in your bank details below.</p>
+
+{% endif %}
+
 {% else %}
 
 <h2>Payment</h2>
 
-<p>A registration fee of MK 22,000 is required to be payed to the following account by September 1st:</p>
+<p>A registration fee of MK 22,000 is required to be payed to the following account by September 1st, and please send in the bank deposit slip by October 1st:</p>
 
 <pre>
 Bank Name: National Bank of Malawi
