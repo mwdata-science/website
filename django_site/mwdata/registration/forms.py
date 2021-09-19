@@ -32,6 +32,9 @@ class RegistrationWeek1Form(forms.ModelForm):
         widget=forms.SelectDateWidget(years=BIRTH_YEAR_CHOICES, attrs={"class": "dob"})
     )
 
+    def clean(self):
+        raise forms.ValidationError("Registration is closed :/")
+
     class Meta:
         model = models.RegistrationWeek1
         fields = (
