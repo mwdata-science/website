@@ -73,12 +73,6 @@ class RegistrationAcceptedForm(forms.ModelForm):
         label="Confirmation",
     )
 
-    registration_receipt = forms.FileField(
-        widget=FileInput(),
-        required=False,
-        help_text="After paying the registration fee of MK 22,000 - please provide evidence of the the bank deposit slip before October 1st.",
-    )
-
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
         if self.instance and (self.instance.confirmed or self.instance.user_canceled):
@@ -116,7 +110,6 @@ class RegistrationAcceptedForm(forms.ModelForm):
         model = models.Registration
         fields = [
             "has_laptop",
-            "registration_receipt",
             "confirmed_choice",
             "tshirt_size",
             "tshirt_fit",
@@ -125,23 +118,37 @@ class RegistrationAcceptedForm(forms.ModelForm):
         ]
 
 
+class RegistrationAcceptedConfirmedForm(RegistrationAcceptedForm):
+    registration_receipt = forms.FileField(
+        widget=FileInput(),
+        required=False,
+        help_text="After paying the registration fee of MK 22,000 - please provide evidence of the the bank deposit slip before October 1st.",
+    )
+
+    class Meta:
+        model = models.Registration
+        fields = [
+            "registration_receipt",
+        ] + RegistrationAcceptedForm.Meta.fields
+
+
 class RegistrationAcceptedScholarshipConfirmedForm(RegistrationAcceptedForm):
     class Meta:
         model = models.Registration
-        fields = RegistrationAcceptedForm.Meta.fields + [
+        fields = [
             "reimbursement_bank_name",
             "reimbursement_account_owner",
             "reimbursement_branch_code",
             "reimbursement_account_number",
-        ]
+        ] + RegistrationAcceptedForm.Meta.fields
 
 
 class RegistrationAcceptedScholarshipForm(RegistrationAcceptedForm):
     class Meta:
         model = models.Registration
-        fields = RegistrationAcceptedForm.Meta.fields + [
+        fields = [
             "scholarship_accomodation",
             "scholarship_transportation",
             "scholarship_transportation_departure",
             "scholarship_other_needs",
-        ]
+        ] + RegistrationAcceptedForm.Meta.fields
