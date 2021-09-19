@@ -128,6 +128,19 @@ class RegistrationAcceptedConfirmedForm(RegistrationAcceptedForm):
         help_text="After paying the registration fee of MK 22,000 - please provide evidence of the the bank deposit slip before October 1st.",
     )
 
+    def clean(self):
+        cleaned_data = self.cleaned_data
+        participation_fields = [
+            "tshirt_size",
+            "tshirt_fit",
+            "tshirt_color",
+            "dietary_restrictions",
+        ]
+        if not all(cleaned_data[k] for k in participation_fields):
+            print(list((k, cleaned_data[k]) for k in participation_fields))
+            raise forms.ValidationError("You have to fill in all the fields.")
+        return cleaned_data
+
     class Meta:
         model = models.Registration
         fields = [
@@ -136,6 +149,19 @@ class RegistrationAcceptedConfirmedForm(RegistrationAcceptedForm):
 
 
 class RegistrationAcceptedScholarshipConfirmedForm(RegistrationAcceptedForm):
+    def clean(self):
+        cleaned_data = self.cleaned_data
+        participation_fields = [
+            "tshirt_size",
+            "tshirt_fit",
+            "tshirt_color",
+            "dietary_restrictions",
+        ]
+        if not all(cleaned_data[k] for k in participation_fields):
+            print(list((k, cleaned_data[k]) for k in participation_fields))
+            raise forms.ValidationError("You have to fill in all the fields.")
+        return cleaned_data
+
     class Meta:
         model = models.Registration
         fields = [
@@ -147,6 +173,19 @@ class RegistrationAcceptedScholarshipConfirmedForm(RegistrationAcceptedForm):
 
 
 class RegistrationAcceptedScholarshipForm(RegistrationAcceptedForm):
+    def clean(self):
+        cleaned_data = self.cleaned_data
+        participation_fields = [
+            "tshirt_size",
+            "tshirt_fit",
+            "tshirt_color",
+            "dietary_restrictions",
+        ]
+        if not all(cleaned_data[k] for k in participation_fields):
+            print(list((k, cleaned_data[k]) for k in participation_fields))
+            raise forms.ValidationError("You have to fill in all the fields.")
+        return cleaned_data
+
     class Meta:
         model = models.Registration
         fields = [
