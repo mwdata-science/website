@@ -66,6 +66,8 @@ class RegistrationAccepted(UpdateView):
         )
 
     def get_form_class(self):
+        if self.object.confirmed:
+            return forms.RegistrationAcceptedConfirmedForm
         if self.object.scholarship and not self.object.scholarship_confirmed:
             return forms.RegistrationAcceptedScholarshipForm
         if self.object.scholarship_confirmed:
