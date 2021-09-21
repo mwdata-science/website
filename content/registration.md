@@ -12,7 +12,7 @@ identifier: "registration"
 Registration opened July 29th, 2021 and concludes latest September 1st, after which everyone is
 informed.
 
-<a href="https://mwdata.science/app/registration/python-week-of-code/">Go to the registration form</a>
+<s><a href="https://mwdata.science/app/registration/python-week-of-code/">Go to the registration form</a></s>
 
 # Week 2: Malawi Data Science Bootcamp
 
