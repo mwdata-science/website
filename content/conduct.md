@@ -9,8 +9,6 @@ identifier: "conduct"
 
 # Code of Conduct
 
-This text is adapted from [The Berlin Code of Conduct](https://berlincodeofconduct.org/).
-
 Purpose
 -------
 
@@ -84,5 +82,7 @@ We expect all community participants (contributors, paid or otherwise; sponsors;
 
 License and attribution
 -----------------------
+
+This text is adapted from [The Berlin Code of Conduct](https://berlincodeofconduct.org/).
 
 Berlin Code of Conduct is distributed under a [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/) license. It is based on the [pdx.rb Code of Conduct](https://pdxruby.org/CONDUCT).
