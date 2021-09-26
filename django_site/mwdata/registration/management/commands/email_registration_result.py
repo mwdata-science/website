@@ -137,9 +137,9 @@ class Command(BaseCommand):
             + "Accepted registrations: {}\n".format(accepted_registrations.count())
             + "Rejected registrations: {}\n".format(rejected_registrations.count())
             + "Informed waiting list registrations: {}\n".format(
-                waiting_list_accepted.count()
+                waiting_list_registrations.count()
             )
             + "Accepted waiting list registrations: {}\n".format(
-                waiting_list_registrations.count()
+                waiting_list_accepted.count()
             )
         )
