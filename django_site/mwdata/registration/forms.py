@@ -223,7 +223,7 @@ class RegistrationWeek1AcceptedForm(forms.ModelForm):
             "dietary_restrictions",
         ]
 
-        if not cleaned_data.get("confirmed_choice"):
+        if cleaned_data.get("confirmed_choice") is False:
             if any(cleaned_data[k] for k in participation_fields):
                 raise forms.ValidationError(
                     "You have chosen to cancel your participation, please leave all other fields blank."
