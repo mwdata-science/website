@@ -429,6 +429,9 @@ class EmailLog(models.Model):
     registration = models.ForeignKey(
         Registration, null=True, blank=True, on_delete=models.SET_NULL
     )
+    registration_week1 = models.ForeignKey(
+        RegistrationWeek1, null=True, blank=True, on_delete=models.SET_NULL
+    )
     recipient = models.CharField(max_length=32)
     email_content = models.TextField()
 
