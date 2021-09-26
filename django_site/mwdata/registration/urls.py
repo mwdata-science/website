@@ -30,6 +30,16 @@ urlpatterns = [
     path(
         "confirmation/<str:access_code>/done/",
         views.RegistrationAcceptedConfirm.as_view(),
-        name="confirmation_done",
+        name="confirmation-done",
+    ),
+    path(
+        "python-week-of-code/confirmation/<str:access_code>/",
+        views.RegistrationWeek1Accepted.as_view(),
+        name="week1-confirmation",
+    ),
+    path(
+        "python-week-of-code/confirmation/<str:access_code>/done/",
+        views.RegistrationWeek1AcceptedConfirm.as_view(),
+        name="week1-confirmation-done",
     ),
 ]

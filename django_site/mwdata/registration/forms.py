@@ -194,3 +194,62 @@ class RegistrationAcceptedScholarshipForm(RegistrationAcceptedForm):
             "scholarship_transportation_departure",
             "scholarship_other_needs",
         ] + RegistrationAcceptedForm.Meta.fields
+
+
+class RegistrationWeek1AcceptedForm(forms.ModelForm):
+
+    confirmed_choice = forms.TypedChoiceField(
+        coerce=lambda x: x == "True",
+        choices=(
+            (True, "CONFIRM my participation"),
+            (False, "CANCEL my registration"),
+        ),
+        widget=forms.RadioSelect,
+        initial=None,
+        label="Confirmation",
+    )
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        if self.instance and (self.instance.confirmed or self.instance.user_canceled):
+            del self.fields["confirmed_choice"]
+
+    def clean(self):
+        cleaned_data = self.cleaned_data
+        participation_fields = [
+            "tshirt_size",
+            "tshirt_fit",
+            "tshirt_color",
+            "dietary_restrictions",
+        ]
+
+        if not cleaned_data.get("confirmed_choice"):
+            if any(cleaned_data[k] for k in participation_fields):
+                raise forms.ValidationError(
+                    "You have chosen to cancel your participation, please leave all other fields blank."
+                )
+        else:
+            if not all(cleaned_data[k] for k in participation_fields):
+                print(list((k, cleaned_data[k]) for k in participation_fields))
+                raise forms.ValidationError("You have to fill in all the fields.")
+        return cleaned_data
+
+    def save(self, *args, **kwargs):
+        registration = super().save(*args, **kwargs)
+        if "confirmed_choice" in self.cleaned_data:
+            registration.confirmed = self.cleaned_data["confirmed_choice"]
+            registration.user_canceled = not self.cleaned_data["confirmed_choice"]
+        registration.save()
+        return registration
+
+    class Meta:
+        model = models.RegistrationWeek1
+        fields = [
+            "has_laptop",
+            "confirmed_choice",
+            "tshirt_size",
+            "tshirt_fit",
+            "tshirt_color",
+            "dietary_restrictions",
+            "scholarship_transportation_departure",
+        ]

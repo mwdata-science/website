@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Registration Accepted{% endblock %}
+
+{% block content %}
+
+{% if not registration.confirmed %}
+<h1>Confirmation form</h1>
+{% else %}
+<h1>Registration update</h1>
+{% endif %}
+
+<form method="POST" enctype="multipart/form-data">
+{% csrf_token %}
+
+{% if not registration.confirmed %}
+<p>
+    Hello {{ registration.first_name }} 👋 We thank you for your registration
+    for Python Week of Code Malawi and are happy to inform you that we have
+    accepted it! Please confirm your registration by completing the following
+    form.
+</p>
+{% else %}
+<p>
+    Hello {{ registration.first_name }} 👋 We thank you for your confirmation
+    for Python Week of Code Malawi 2021, please review and update your
+    registration data below.
+</p>
+{% endif %}
+
+<h2>Confirmation</h2>
+
+<div class="form-widgets">
+
+<table>
+{{ form.as_table }}
+</table>
+
+</div>
+
+<p>
+    <button type="submit">Save</button>
+</p>
+
+
+</form>
+
+
+{% endblock %}

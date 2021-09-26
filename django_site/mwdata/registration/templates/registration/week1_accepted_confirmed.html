@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Response Saved{% endblock %}
+
+{% block content %}
+
+<h1>Registration response saved</h1>
+
+<p>
+    Thank you! We have received your response.
+</p>
+
+<p>
+    Response: <strong>{% if registration.confirmed %}CONFIRMED{% else %}CANCELED{% endif %}</strong>
+</p>
+
+{% endblock %}

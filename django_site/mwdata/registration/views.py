@@ -33,14 +33,14 @@ class RegistrationConfirm(TemplateView):
 class RegistrationWeek1Create(CreateView):
     model = models.RegistrationWeek1
     form_class = forms.RegistrationWeek1Form
-    template_name = "registration/create_python_week_of_code.html"
+    template_name = "registration/week1_create.html"
 
     def get_success_url(self):
         return reverse("registration:confirmed-week1")
 
 
 class RegistrationWeek1Confirm(TemplateView):
-    template_name = "registration/create_python_week_of_code_confirmed.html"
+    template_name = "registration/week1_create_confirmed.html"
 
 
 class RegistrationAccepted(UpdateView):
@@ -61,7 +61,7 @@ class RegistrationAccepted(UpdateView):
 
     def get_success_url(self):
         return reverse(
-            "registration:confirmation_done",
+            "registration:confirmation-done",
             kwargs={"access_code": self.access_code},
         )
 
@@ -87,3 +87,43 @@ class RegistrationAcceptedConfirm(DetailView):
 
     def get_object(self):
         return UpdateView.get_queryset(self).get(access_code=self.access_code)
+
+
+class RegistrationWeek1AcceptedConfirm(DetailView):
+    template_name = "registration/week1_accepted_confirmed.html"
+    model = models.RegistrationWeek1
+    context_object_name = "registration"
+
+    @method_decorator(ratelimit(key="ip", rate="100/h"))
+    def dispatch(self, request, *args, **kwargs):
+        self.access_code = kwargs["access_code"]
+        return DetailView.dispatch(self, request, *args, **kwargs)
+
+    def get_object(self):
+        return UpdateView.get_queryset(self).get(access_code=self.access_code)
+
+
+class RegistrationWeek1Accepted(UpdateView):
+    template_name = "registration/week1_accepted.html"
+    model = models.RegistrationWeek1
+    context_object_name = "registration"
+
+    @method_decorator(ratelimit(key="ip", rate="100/h"))
+    def dispatch(self, request, *args, **kwargs):
+        self.access_code = kwargs["access_code"]
+        return UpdateView.dispatch(self, request, *args, **kwargs)
+
+    def get_object(self):
+        return UpdateView.get_queryset(self).get(
+            access_code=self.access_code,
+            accepted=True,
+        )
+
+    def get_success_url(self):
+        return reverse(
+            "registration:week1-confirmation-done",
+            kwargs={"access_code": self.access_code},
+        )
+
+    def get_form_class(self):
+        return forms.RegistrationWeek1AcceptedForm

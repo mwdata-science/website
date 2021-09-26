@@ -49,7 +49,7 @@ class RegistrationAbstract(models.Model):
         null=True,
         blank=True,
         max_length=3,
-        verbose_name="T-shirt sizes",
+        verbose_name="T-shirt size",
         choices=[
             ("xs", "XS"),
             ("s", "S"),
@@ -64,7 +64,7 @@ class RegistrationAbstract(models.Model):
         null=True,
         blank=True,
         max_length=16,
-        verbose_name="T-shirt sizes",
+        verbose_name="T-shirt fit",
         choices=[
             ("women", "Women's fit"),
             ("men", "Men's fit"),
@@ -347,6 +347,14 @@ class RegistrationWeek1(RegistrationAbstract):
         verbose_name="Programming experience",
         max_length=300,
         help_text="If you have existing experiences with general programming, you can indicate them here (300 characters max)",
+    )
+
+    scholarship_transportation_departure = models.CharField(
+        null=True,
+        blank=True,
+        max_length=1024,
+        verbose_name="Departure place",
+        help_text="Tell us where you are traveling from. Please indicate city/district (if Lilongwe), country",
     )
 
     class Meta:

@@ -1,0 +1,15 @@
+{% extends "registration/email/base.txt" %}
+
+{% block content %}
+Thank you for applying to attend the Python Week of Code Malawi 2021.
+
+We regret to inform you that your application has not been successful due to the
+high volume of applications we received for a limited number of slots available.
+
+We understand that you will be disappointed by this news, and if you require
+feedback as to why you were unsuccessful, or any further information, please do
+not hesitate to contact us using this email address: info@mwdata.science
+
+This is hopefully not the last time that such an event takes place, and we hope
+that you will get another chance of participating in similar events during 2022.
+{% endblock %}

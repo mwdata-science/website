@@ -1,0 +1,21 @@
+{% extends "registration/email/base.txt" %}
+
+{% block content %}
+We thank you for your registration for Python Week of Code Malawi. We are happy
+to inform you that we have accepted it!
+
+The next step is important: We need your confirmation submitted digitally. In
+case you cannot make it, please do also tell us, as we may offer the seat to
+someone on the waiting list.
+
+Use the following link to confirm (or cancel) your participation and supply a
+few extra details:
+
+{{ protocol }}://{{ domain }}{% url "registration:week1-confirmation" access_code=registration.get_access_code %}
+
+*YOU NEED TO CONFIRM NO LATER THAN OCTOBER 6TH*
+
+If we do not receive your confirmation before this date, your seat will be
+offered to another participant.
+
+{% endblock %}

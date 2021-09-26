@@ -48,80 +48,73 @@ class BaseEmail(EmailMessage):
             print(self.get_body())
 
 
-class RegistrationAccepted(BaseEmail):
+class BaseRegistrationEmail(BaseEmail):
+    def __init__(self, *args, **kwargs):
+        self.registration = kwargs.pop("registration")
+        super().__init__(*args, **kwargs)
+
+    def get_context_data(self):
+        c = super().get_context_data()
+        c["registration"] = self.registration
+        return c
+
+
+class RegistrationAccepted(BaseRegistrationEmail):
 
     template = "registration/email/accepted.txt"
     default_subject = "Accepted: Malawi Data Science Bootcamp 2021"
 
-    def __init__(self, *args, **kwargs):
-        self.registration = kwargs.pop("registration")
-        super().__init__(*args, **kwargs)
 
-    def get_context_data(self):
-        c = super().get_context_data()
-        c["registration"] = self.registration
-        return c
-
-
-class RegistrationWaitingListAccepted(BaseEmail):
+class RegistrationWaitingListAccepted(BaseRegistrationEmail):
 
     template = "registration/email/accepted_waiting_list.txt"
     default_subject = "Accepted: Malawi Data Science Bootcamp 2021"
 
-    def __init__(self, *args, **kwargs):
-        self.registration = kwargs.pop("registration")
-        super().__init__(*args, **kwargs)
 
-    def get_context_data(self):
-        c = super().get_context_data()
-        c["registration"] = self.registration
-        return c
-
-
-class RegistrationNotAccepted(BaseEmail):
+class RegistrationNotAccepted(BaseRegistrationEmail):
 
     template = "registration/email/rejected.txt"
     default_subject = "Not accepted: Malawi Data Science Bootcamp 2021"
 
-    def __init__(self, *args, **kwargs):
-        self.registration = kwargs.pop("registration")
-        super().__init__(*args, **kwargs)
 
-    def get_context_data(self):
-        c = super().get_context_data()
-        c["registration"] = self.registration
-        return c
-
-
-class RegistrationWaitingList(BaseEmail):
+class RegistrationWaitingList(BaseRegistrationEmail):
 
     template = "registration/email/waiting_list.txt"
     default_subject = "Waiting list: Malawi Data Science Bootcamp 2021"
 
-    def __init__(self, *args, **kwargs):
-        self.registration = kwargs.pop("registration")
-        super().__init__(*args, **kwargs)
 
-    def get_context_data(self):
-        c = super().get_context_data()
-        c["registration"] = self.registration
-        return c
+class RegistrationWeek1Accepted(BaseRegistrationEmail):
+
+    template = "registration/email/week1/accepted.txt"
+    default_subject = "Accepted: Python Week of Code Malawi 2021"
 
 
-class RegistrationMassmail(BaseEmail):
+class RegistrationWeek1WaitingListAccepted(BaseRegistrationEmail):
+
+    template = "registration/email/week1/accepted_waiting_list.txt"
+    default_subject = "Accepted: Python Week of Code Malawi 2021"
+
+
+class RegistrationWeek1NotAccepted(BaseRegistrationEmail):
+
+    template = "registration/email/week1/rejected.txt"
+    default_subject = "Not accepted: Python Week of Code Malawi 2021"
+
+
+class RegistrationWeek1WaitingList(BaseRegistrationEmail):
+
+    template = "registration/email/week1/waiting_list.txt"
+    default_subject = "Waiting list: Python Week of Code Malawi 2021"
+
+
+class RegistrationMassmail(BaseRegistrationEmail):
 
     template = "registration/email/massmail.txt"
 
     def __init__(self, *args, **kwargs):
-        self.registration = kwargs.pop("registration")
         self.massmail = kwargs.pop("massmail")
         kwargs.setdefault("subject", self.massmail.subject)
         super().__init__(*args, **kwargs)
-
-    def get_context_data(self):
-        c = super().get_context_data()
-        c["registration"] = self.registration
-        return c
 
     def get_body(self):
         t = Template(self.massmail.text_body)

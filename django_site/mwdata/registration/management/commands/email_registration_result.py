@@ -18,29 +18,61 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
+        self.handle_generalized(
+            "Week 1, Python Week of Code Malawi 2021",
+            models.RegistrationWeek1,
+            mail.RegistrationWeek1Accepted,
+            mail.RegistrationWeek1NotAccepted,
+            mail.RegistrationWeek1WaitingList,
+            mail.RegistrationWeek1WaitingListAccepted,
+            *args,
+            **options,
+        )
+        self.handle_generalized(
+            "Week 2, Malawi Data Science Bootcamp",
+            models.Registration,
+            mail.RegistrationAccepted,
+            mail.RegistrationNotAccepted,
+            mail.RegistrationWaitingList,
+            mail.RegistrationWaitingListAccepted,
+            *args,
+            **options,
+        )
 
-        accepted_registrations = models.Registration.objects.filter(
+    def handle_generalized(
+        self,
+        verbose_type_name,
+        Registration,
+        RegistrationAccepted,
+        RegistrationNotAccepted,
+        RegistrationWaitingList,
+        RegistrationWaitingListAccepted,
+        *args,
+        **options,
+    ):
+
+        accepted_registrations = Registration.objects.filter(
             accepted=True,
             confirmed=False,
             waiting_list=False,
             user_canceled=False,
             accepted_email_sent=None,
         )
-        rejected_registrations = models.Registration.objects.filter(
+        rejected_registrations = Registration.objects.filter(
             accepted=False,
             waiting_list=False,
             confirmed=False,
             rejection_list_email_sent=None,
             user_canceled=False,
         )
-        waiting_list_registrations = models.Registration.objects.filter(
+        waiting_list_registrations = Registration.objects.filter(
             accepted=False,
             waiting_list=True,
             confirmed=False,
             waiting_list_email_sent=None,
             user_canceled=False,
         )
-        waiting_list_accepted = models.Registration.objects.filter(
+        waiting_list_accepted = Registration.objects.filter(
             accepted=True,
             waiting_list=True,
             confirmed=False,
@@ -50,7 +82,7 @@ class Command(BaseCommand):
 
         for registration in accepted_registrations:
             print("Sending to: {}".format(registration.email))
-            email = mail.RegistrationAccepted(
+            email = RegistrationAccepted(
                 registration=registration,
                 recipient_name=registration.name,
                 from_email="info@mwdata.science",
@@ -63,7 +95,7 @@ class Command(BaseCommand):
 
         for registration in rejected_registrations:
             print("Sending to: {}".format(registration.email))
-            email = mail.RegistrationNotAccepted(
+            email = RegistrationNotAccepted(
                 registration=registration,
                 recipient_name=registration.name,
                 from_email="info@mwdata.science",
@@ -76,7 +108,7 @@ class Command(BaseCommand):
 
         for registration in waiting_list_registrations:
             print("Sending to: {}".format(registration.email))
-            email = mail.RegistrationWaitingList(
+            email = RegistrationWaitingList(
                 registration=registration,
                 recipient_name=registration.name,
                 from_email="info@mwdata.science",
@@ -89,7 +121,7 @@ class Command(BaseCommand):
 
         for registration in waiting_list_accepted:
             print("Sending to: {}".format(registration.email))
-            email = mail.RegistrationWaitingListAccepted(
+            email = RegistrationWaitingListAccepted(
                 registration=registration,
                 recipient_name=registration.name,
                 from_email="info@mwdata.science",
@@ -101,7 +133,8 @@ class Command(BaseCommand):
                 registration.save()
 
         print(
-            "Accepted registrations: {}\n".format(accepted_registrations.count())
+            f"{verbose_type_name}\n\n"
+            + "Accepted registrations: {}\n".format(accepted_registrations.count())
             + "Rejected registrations: {}\n".format(rejected_registrations.count())
             + "Informed waiting list registrations: {}\n".format(
                 waiting_list_accepted.count()
