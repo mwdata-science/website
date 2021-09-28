@@ -7,6 +7,6 @@ weight: 40
 ---
 
 
-Jessica is a Mathematician, Coder and an educator. She is the lead of Python Namibia Society and a global Python community volunteer.
+Jessica is a mathematician, coder and an educator. She is the lead of Python Namibia Society and a global Python community volunteer.
 
-She is a [PyLadies](https://pyladies.com/) Global Council executive currently co-leading the Resources team and Community liaison.
+She is a [PyLadies](https://pyladies.com/) Global Council Executive currently co-leading the Resources Team and Community Liaison.
