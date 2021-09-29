@@ -1,3 +1,4 @@
+from csvexport.actions import csvexport
 from django.contrib import admin
 from django.shortcuts import redirect
 from django.template import loader
@@ -45,7 +46,7 @@ class RegistrationAdmin(RegistrationAbstractAdmin):
         "scholarship_confirmed",
         "scholarship_transportation",
     )
-    actions = ("create_massmail",)
+    actions = ("create_massmail", csvexport)
 
     def create_massmail(self, request, queryset):
         template_string = loader.render_to_string(

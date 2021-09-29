@@ -1,3 +1,4 @@
 django>=3.2,<3.3
 django-countries==7.1
 django-ratelimit
+django-admin-csvexport=1.11
