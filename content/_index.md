@@ -24,6 +24,13 @@ Events will take place at [Mzuzu University's new Open Distance Learning](/venue
 
 #### Updates
 
+📢 **October 9th 2021** - Updates from organizers  📢
+
+We have had a number of small online meetings with facilitators, and a final program for the whole event is almost ready.
+
+And just 9 days left now before Python Week of Code kicks off! We are very excited! If you are experienced with Python and interested in assisting us, please write info@mwdata.science.
+
+
 📢 **August 24th 2021** - Python Week of Code program  📢
 
 The headlines of the program for the Python Week of Code have been decided and are announced further down and in our [Call for Partipation](/cfp/).
