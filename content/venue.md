@@ -64,4 +64,14 @@ page="/venue-photos"
 
 ## Getting there, accommodation etc.
 
-We will update this site with information about getting to the venue
+All attendees should receive direct information about the accommodation provided, if they require.
+
+Please refer to this map for a simplification of how to get around in the area:
+
+{{< imgProc
+img="venue_getting_around.jpeg"
+command="Fit"
+options="800x800 q80"
+alt="Main building"
+class="img-thumbnail"
+>}}
