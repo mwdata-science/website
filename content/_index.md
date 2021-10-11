@@ -12,8 +12,6 @@ Malawi Data Science Bootcamp 2021 is the first of its kind in Malawi: For a whol
 
 In the lead-up to the **Data Science Bootcamp**, a week of tutorials in Python and Data Science takes place, the **Python Week of Code**.
 
-Read more in our [Call for Participation](/cfp/)
-
 
 # When and where
 
