@@ -89,10 +89,11 @@ class MassMailAdmin(admin.ModelAdmin):
 
 class EmailLogAdmin(admin.ModelAdmin):
     list_display = (
+        "recipient",
+        "sent",
         "registration",
         "registration_week1",
         "massmail",
-        "recipient",
         "dry_run",
     )
 
