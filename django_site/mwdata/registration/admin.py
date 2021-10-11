@@ -87,6 +87,17 @@ class MassMailAdmin(admin.ModelAdmin):
     list_display = ("subject", "created", "schedule_send", "sent", "sending")
 
 
+class EmailLogAdmin(admin.ModelAdmin):
+    list_display = (
+        "registration",
+        "registration_week1",
+        "massmail",
+        "recipient",
+        "dry_run",
+    )
+
+
 admin.site.register(models.Registration, RegistrationAdmin)
 admin.site.register(models.RegistrationWeek1, RegistrationWeek1Admin)
 admin.site.register(models.MassMail, MassMailAdmin)
+admin.site.register(models.EmailLog, EmailLogAdmin)

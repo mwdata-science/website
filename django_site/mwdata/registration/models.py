@@ -432,7 +432,17 @@ class EmailLog(models.Model):
     registration_week1 = models.ForeignKey(
         RegistrationWeek1, null=True, blank=True, on_delete=models.SET_NULL
     )
+    massmail = models.ForeignKey(
+        MassMail,
+        null=True,
+        blank=True,
+        on_delete=models.SET_NULL,
+        related_name="email_log",
+    )
     recipient = models.CharField(max_length=32)
     email_content = models.TextField()
+    dry_run = models.BooleanField(
+        editable=False, verbose_name="Test email (dry run)", default=False
+    )
 
     sent = models.DateTimeField(auto_now_add=True)

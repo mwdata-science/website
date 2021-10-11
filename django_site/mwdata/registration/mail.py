@@ -38,17 +38,21 @@ class BaseEmail(EmailMessage):
     def send(self, send_not_print=True):
         if send_not_print:
             super().send(fail_silently=False)
-            for recipient in self.to:
-                registration = getattr(self, "registration")
-                if isinstance(registration, models.RegistrationWeek1):
-                    registration_week1 = registration
-                    registration = None
-                models.EmailLog.objects.create(
-                    email_content=self.get_body(),
-                    registration=registration,
-                    registration_week1=registration_week1,
-                    recipient=recipient,
-                )
+        for recipient in self.to:
+            registration = getattr(self, "registration")
+            registration_week1 = None
+            massmail = getattr(self, "massmail")
+            if isinstance(registration, models.RegistrationWeek1):
+                registration_week1 = registration
+                registration = None
+            models.EmailLog.objects.create(
+                email_content=self.get_body(),
+                registration=registration,
+                registration_week1=registration_week1,
+                recipient=recipient,
+                massmail=massmail,
+                dry_run=not send_not_print,
+            )
         else:
             print(self.get_body())
 
