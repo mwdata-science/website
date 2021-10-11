@@ -6,3 +6,10 @@
     {{ end }}
   </div>
 </nav>
+<nav class="custom-navbar-events">
+  <div class="container">
+    {{ range .Site.Menus.events }}
+    <a href="{{ .URL | absURL }}"{{ if or ($currentPage.IsMenuCurrent "main" .) (eq $currentPage.Params.Identifier .Identifier) }} class="active"{{ end }}>{{ .Name }}</a>
+    {{ end }}
+  </div>
+</nav>

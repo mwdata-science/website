@@ -55,6 +55,17 @@ theme = "mwdata"
   name = "Conduct"
   url = "/conduct/"
   weight = 6
+  [[menu.events]]
+  identifier = "pwoc"
+  name = "Week 1: Python Week of Code"
+  url = "/python-week-of-code/"
+  weight = 1
+  [[menu.events]]
+  identifier = "program"
+  name = "Week 2: Bootcamp"
+  url = "/program/"
+  weight = 2
+
 
 [markup]
   defaultMarkdownHandler = "goldmark"

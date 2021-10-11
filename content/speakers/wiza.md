@@ -4,6 +4,7 @@ speaker_name: "Wiza Msuku"
 img_name: "wiza.jpeg"
 published: true
 weight: 102
+twitter: ugly_as_eva
 ---
 
 Wiza Msuku is data lake team lead at Elizabeth Glaser Pediatric AIDS Foundation,  he is responsible for the Ministry of Health Central data repository for the HIV program and related programs throughout the data management life cycle of both structured and unstructured data.

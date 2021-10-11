@@ -25,7 +25,32 @@
 
 <div style="clear: both"></div>
 
-{{- end -}}
+
+<h3>Program entries</h3>
+
+
+{{ range sort (where (where (where site.RegularPages.ByDate "Section" "program-entries") "published" "!=" "false") "Params.speaker" "==" .File.ContentBaseName ) ".Params.program_slot" "asc" }}
+
+  <a href="{{ .Permalink }}">
+
+  <h1>{{ .Params.title }}</h1>
+  <h5>{{ .Params.program_slot }}</h5>
+
+  {{ if .Content }}
+    <p>
+    {{ .Content | truncate 300 }} <a href="{{ .Permalink }}">Read more »</a>
+    </p>
+  {{ end }}
+
+{{else}}
+
+<em>No program entries found - we are still working on the program.</em>
+
+{{ end }}
+
+
+{{ end }}
+
 
 
 {{- define "twitter_image" -}}

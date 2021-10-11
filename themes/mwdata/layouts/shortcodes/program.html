@@ -1,0 +1,35 @@
+<br>
+<div style="clear: both"></div>
+
+<em>We are currently adding abstracts and titles from the program</em>
+
+{{ range sort (where (where site.RegularPages.ByDate "Section" "program-entries") "published" "!=" "false") ".Params.program_slot" "asc" }}
+
+<a href="{{ .Permalink }}">
+
+{{- $speaker := (site.GetPage (printf "/speakers/%s" .Params.speaker) ) -}}
+
+{{- $original := ((site.GetPage "/speakers").Resources.GetMatch (printf "*%s*" $speaker.Params.img_name)) -}}
+
+{{- $new := "" -}}
+{{- $new = $original.Fill "150x150" -}}
+
+<img src="{{ $new.Permalink }}" alt="Speaker" class="img-speaker float-right" />
+
+</a>
+
+
+<h1>{{ .Params.title }}</h1>
+<h5>{{ .Params.program_slot }}</h5>
+<h5>{{ $speaker.Params.speaker_name }}</h5>
+
+
+{{ if .Content }}
+  <p>
+  {{ .Content | truncate 300 }} {{ if not $speaker.Params.skip_readmore }} <a href="{{ .Permalink }}">Read more »</a>{{ end }}
+  </p>
+{{ end }}
+
+<div style="clear: both"></div>
+
+{{ end }}

@@ -16,8 +16,8 @@ The purpose of the event is to provide participants with a basic Python knowledg
 This is both a great way to be introduced to Python and Data Science in general and an opportunity to prepare if you
 have been accepted for Week 2's Data Science Bootcamp (but that's NOT a requirement).
 
-To participate, you must [register here](/registration/).
+~~To participate, you must [register here](/registration/)~~
 
 ## Program
 
-*Program is yet to be announced.*
+{{% include "./static/include/week1_program_table.md" %}}
