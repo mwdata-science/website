@@ -35,11 +35,6 @@ class Command(BaseCommand):
                 # overlaps here
                 massmail.sending = True
                 massmail.save()
-
-            else:
-                print(
-                    "Not dry-running, so doing a lookup of what has already been sent"
-                )
                 already_sent_registrations = massmail.email_log.exclude(
                     registration=None
                 )
@@ -47,18 +42,25 @@ class Command(BaseCommand):
                     registration_week1=None
                 )
 
-                registrations = list(
-                    massmail.registrations_week1.exclude(
-                        id__in=[
-                            r.registration_week1.id
-                            for r in already_sent_registrations_week1
-                        ]
-                    )
-                ) + list(
-                    massmail.registrations_week2.exclude(
-                        id__in=[r.registration.id for r in already_sent_registrations]
-                    )
+            else:
+                print(
+                    "Dry-running, so not doing a lookup of what has already been sent"
                 )
+                already_sent_registrations = []
+                already_sent_registrations = []
+
+            registrations = list(
+                massmail.registrations_week1.exclude(
+                    id__in=[
+                        r.registration_week1.id
+                        for r in already_sent_registrations_week1
+                    ]
+                )
+            ) + list(
+                massmail.registrations_week2.exclude(
+                    id__in=[r.registration.id for r in already_sent_registrations]
+                )
+            )
 
             print("Found emails to send: {}".format(timezone.now()))
             for registration in registrations:
