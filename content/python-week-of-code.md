@@ -24,4 +24,4 @@ have been accepted for Week 2's Data Science Bootcamp (but that's NOT a requirem
 
 ## Coaches
 
-{{< speakerlist speakers="jessica" >}}
+{{< speakerlist speakers="jessica ralph" >}}
