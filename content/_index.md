@@ -24,6 +24,11 @@ Events will take place at [Mzuzu University's new Open Distance Learning](/venue
 
 #### Updates
 
+📢 **October 11th 2021** - Program taking shape  📢
+
+We have started to add entries to the programs. Please see the two menu items above in the main menu 🆙
+
+
 📢 **October 9th 2021** - Updates from organizers  📢
 
 We have had a number of small online meetings with facilitators, and a final program for the whole event is almost ready.
