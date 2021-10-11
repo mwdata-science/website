@@ -62,7 +62,7 @@ theme = "mwdata"
   weight = 1
   [[menu.events]]
   identifier = "program"
-  name = "Week 2: Bootcamp"
+  name = "Week 2: Data Science Bootcamp"
   url = "/program/"
   weight = 2
 
