@@ -56,7 +56,7 @@ theme = "mwdata"
   url = "/conduct/"
   weight = 6
   [[menu.events]]
-  identifier = "pwoc"
+  identifier = "python-week-of-code"
   name = "Week 1: Python Week of Code"
   url = "/python-week-of-code/"
   weight = 1
