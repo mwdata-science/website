@@ -1,7 +1,9 @@
-<br>
-<div style="clear: both"></div>
+{{- $speakerfilter := .Get "speakers" -}}
 
 {{ range sort (where (where site.RegularPages.ByDate "Section" "speakers") "published" "!=" "false") ".Params.weight" ".Params.speaker_name" "asc" }}
+
+
+{{ if or (not $speakerfilter) (in $speakerfilter .File.ContentBaseName) }}
 
 <a href="{{ .Permalink }}">
 
@@ -24,5 +26,8 @@
 {{ end }}
 
 <div style="clear: both"></div>
+
+{{ end }}
+
 
 {{ end }}
