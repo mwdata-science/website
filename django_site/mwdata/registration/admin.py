@@ -74,9 +74,7 @@ class RegistrationWeek1Admin(RegistrationAbstractAdmin):
         massmail = models.MassMail.objects.create(text_body=template_string)
         for registration in queryset:
             massmail.registrations_week1.add(registration)
-        return redirect(
-            "admin:registration_massmail_change", kwargs={"object_id": massmail.id}
-        )
+        return redirect("admin:registration_massmail_change", object_id=massmail.id)
 
     create_massmail.short_description = (
         "Create a new mass email for selected recipients"
