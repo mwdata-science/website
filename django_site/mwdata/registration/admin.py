@@ -64,7 +64,7 @@ class RegistrationAdmin(RegistrationAbstractAdmin):
 
 
 class RegistrationWeek1Admin(RegistrationAbstractAdmin):
-    actions = ("create_massmail",)
+    actions = ("create_massmail", csvexport)
 
     def create_massmail(self, request, queryset):
         template_string = loader.render_to_string(
