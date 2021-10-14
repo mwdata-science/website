@@ -33,6 +33,7 @@ We have had a number of small online meetings with facilitators, and a final pro
 
 And just 9 days left now before Python Week of Code kicks off! We are very excited! If you are experienced with Python and interested in assisting us, please write info@mwdata.science.
 
+<div style="display: none">
 
 📢 **August 24th 2021** - Python Week of Code program  📢
 
@@ -60,7 +61,9 @@ People who have already registered will receive a confirmation by email within t
 📢 **May 10th 2021** - Today, registrations have opened 📢<br>
 📢 **May 9th 2021** - Facilitators for Week 2 have been announced 📢
 
-To stay updated, follow us on Twitter: [@mwdatabootcamp](https://twitter.com/mwdatabootcamp)
+</div>
+
+<strong>To stay updated, follow us on Twitter: [@mwdatabootcamp](https://twitter.com/mwdatabootcamp)</strong>
 
 # Facilitators
 
