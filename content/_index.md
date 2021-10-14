@@ -64,7 +64,11 @@ To stay updated, follow us on Twitter: [@mwdatabootcamp](https://twitter.com/mwd
 
 # Facilitators
 
-{{< speakerlist >}}
+{{< speakerlist speakers="akuzike amelia jessica maria michael rachel ralph richard tiwonge winnie wiza" >}}
+
+# Organizers and hosts
+
+{{< speakerlist speakers="reuben stanley" >}}
 
 
 # Program
