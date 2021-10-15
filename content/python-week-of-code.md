@@ -20,7 +20,7 @@ have been accepted for Week 2's Data Science Bootcamp (but that's NOT a requirem
 
 ## Program
 
-{{% include "./static/include/week1_program_table.md" %}}
+{{< program_summary_week1 >}}
 
 ## Coaches
 

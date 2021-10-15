@@ -84,7 +84,7 @@ The purpose of the event is to provide participants with a basic Python knowledg
 This is both a great way to be introduced to Python and Data Science in general and an opportunity to prepare if you
 have been accepted for Week 2's Data Science Bootcamp (but that's NOT a requirement).
 
-{{% include "./static/include/week1_program_table.md" %}}
+[See the full program »](/python-week-of-code/)
 
 ## Week 2: Malawi Data Science Bootcamp
 
@@ -92,6 +92,7 @@ The following is a rough draft of the program. You can find more details about t
 
 {{% include "./static/include/week2_program_table.md" %}}
 
+[See the full program »](/program/)
 
 # Venue
 

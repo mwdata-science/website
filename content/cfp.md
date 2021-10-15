@@ -43,8 +43,7 @@ The first module in the event can be attended regardless of participation in Wee
 
 The Python Week of Code is co-hosted by Python Namibia and supported by Django Denmark.
 
-{{% include "./static/include/week1_program_table.md" %}}
-
+[See the full program »](/python-week-of-code/)
 
 ## Program Week 2: Data Science Bootcamp 📚
 
