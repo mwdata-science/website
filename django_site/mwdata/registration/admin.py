@@ -17,7 +17,12 @@ class RegistrationAbstractAdmin(admin.ModelAdmin):
         "user_canceled",
     ]
 
-    list_filter = ("accepted", "confirmed", "waiting_list")
+    list_filter = (
+        "accepted",
+        "confirmed",
+        "waiting_list",
+        "user_canceled",
+    )
 
     list_editable = [
         "registration_total_score",
