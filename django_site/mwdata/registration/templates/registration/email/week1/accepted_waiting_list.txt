@@ -1,7 +1,7 @@
 {% extends "registration/email/base.txt" %}
 
 {% block content %}
-We are happy to inform you that we have accepted your application!
+A seat has opened up and we are happy to inform you that we have accepted your application!
 
 The next step is important: We need your confirmation submitted digitally.
 
@@ -9,9 +9,8 @@ Use the following link to confirm your participation and supply a few extra deta
 
 {{ protocol }}://{{ domain }}{% url "registration:week1-confirmation" access_code=registration.get_access_code %}
 
-*YOU NEED TO CONFIRM NO LATER THAN OCTOBER 10TH*
+*YOU NEED TO CONFIRM NO LATER THAN OCTOBER 18TH*
 
-If we do not receive your confirmation before this date, your seat will be
-offered to another participant.
+If we do not receive your confirmation before this date, the event will have started and it will be too late.
 
 {% endblock %}
