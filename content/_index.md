@@ -15,8 +15,8 @@ In the lead-up to the **Data Science Bootcamp**, a week of tutorials in Python a
 
 # When and where
 
-* Week 1: October 18-22 Python Week of Code
-* Week 2: October 25-29 Data Science Bootcamp
+* Week 1: October 18-22 Python Week of Code - [Program »](/python-week-of-code/)
+* Week 2: October 25-29 Data Science Bootcamp - [Program »](/program/)
 
 Events will take place at [Mzuzu University's new Open Distance Learning](/venue/) facility in **Lilongwe, Malawi**. Accommodation will be offered in the nearby surroundings, making it a comfortable, fun and productive stay for everyone involved.
 

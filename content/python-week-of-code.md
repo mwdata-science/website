@@ -3,6 +3,7 @@ title: Python Week of Code
 date: "2021-07-30"
 description: "Python Week of Code is a 5-day training in Python with a special focus on Data Science. Happening at Malawi's first Data Science Bootcamp."
 draft: false
+identifier: "python-week-of-code"
 ---
 
 # Python Week of Code
