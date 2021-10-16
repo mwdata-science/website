@@ -41,7 +41,7 @@ class BaseEmail(EmailMessage):
         for recipient in self.to:
             registration = getattr(self, "registration")
             registration_week1 = None
-            massmail = getattr(self, "massmail")
+            massmail = getattr(self, "massmail", None)
             if isinstance(registration, models.RegistrationWeek1):
                 registration_week1 = registration
                 registration = None
