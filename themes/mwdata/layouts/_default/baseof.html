@@ -130,8 +130,8 @@ special prize!
     <meta property="og:title" content="{{ .Site.Title }}" />
   {{ else }}
     <title>{{ .Params.Title }} | {{ .Site.Title }}</title>
-    <meta name="twitter:title" content="{{ .Params.twitter_title | default .Site.Title }} | {{ .Site.Title }}">
-    <meta property="og:title" content="{{ .Params.og_title | default .Site.Title }} | {{ .Site.Title }}" />
+    <meta name="twitter:title" content="{{ .Params.Title | default .Site.Title }} | {{ .Site.Title }}">
+    <meta property="og:title" content="{{ .Params.Title | default .Site.Title }} | {{ .Site.Title }}" />
   {{ end }}
 
 </head>
