@@ -151,37 +151,81 @@ If you want to help us with Malawi Data Science Bootcamp, please send us an emai
 # Supporters
 <br>
 
+<div class="sponsor-cards">
+
+<div class="sponsor-card">
 <a href="https://kdd.org" target="_blank" class="sponsor">
+<div class="sponsor-img">
 {{< imgProc
 img="logo-kdd.png"
 command="Fit"
-options="280x110"
+options="400x200"
 alt="SIGKDD"
 class="img-sponsor"
 >}}
+</div>
+<div class="sponsor-card-text">
+The Association for Computing Machinery's Special Interest Group on Knowledge Discovery and Data Mining.
+</div>
 </a>
+</div>
 
+<div class="sponsor-card">
 <a href="https://www.mzuni.ac.mw/" target="_blank" class="sponsor">
+<div class="sponsor-img">
 {{< imgProc
 img="logo-mzuni.png"
 command="Fit"
-options="280x110"
+options="400x200"
 alt="Mzuzu University"
 class="img-sponsor"
 >}}
+</div>
+<div class="sponsor-card-text">
+Mzuzu University
+</div>
 </a>
+</div>
 
+<div class="sponsor-card">
 <a href="https://di.ku.dk/" target="_blank" class="sponsor">
+<div class="sponsor-img">
 {{< imgProc
 img="logo-ku.png"
 command="Fit"
-options="280x110"
+options="400x200"
 alt="Department of Computer Science - Copenhagen University"
 class="img-sponsor"
 >}}
+</div>
+<div class="sponsor-card-text">
+Department of Computer Science - Copenhagen University
+</div>
 </a>
 
+</div>
+
+<div class="sponsor-card">
+<a href="https://www.djangoproject.com/foundation/" target="_blank" class="sponsor">
+<div class="sponsor-img">
+{{< imgProc
+img="django.png"
+command="Fit"
+options="400x200"
+alt="Django Software Foundation"
+class="img-sponsor"
+>}}
+</div>
+<div class="sponsor-card-text">
+Django Software Foundation
+</div>
+</a>
+
+</div>
+
+<div class="sponsor-card">
 <a href="https://pynamibia.herokuapp.com/" target="_blank" class="sponsor">
+<div class="sponsor-img">
 {{< imgProc
 img="logo-pynam.png"
 command="Fit"
@@ -189,25 +233,48 @@ options="250x100"
 alt="Python Community of Namibia"
 class="img-sponsor"
 >}}
+</div>
+<div class="sponsor-card-text">
+Python Community of Namibia
+</div>
 </a>
 
+</div>
+
+<div class="sponsor-card">
 <a href="https://www.django-denmark.org/" target="_blank" class="sponsor">
+<div class="sponsor-img">
 {{< imgProc
 img="djangodanmark.png"
 command="Fit"
-options="280x110"
+options="400x200"
 alt="Django Denmark"
 class="img-sponsor"
 >}}
+</div>
+<div class="sponsor-card-text">
+Django Denmark
+</div>
 </a>
 
+</div>
 
+
+<div class="sponsor-card">
 <a href="https://www.fairdanmark.dk/en/" target="_blank" class="sponsor">
+<div class="sponsor-img">
 {{< imgProc
 img="logo-fair.png"
 command="Fit"
-options="280x110"
+options="400x200"
 alt="Fair Allocation of Infotech Resources (FAIR Denmark)"
 class="img-sponsor"
 >}}
+</div>
+<div class="sponsor-card-text">
+Fair Allocation of Infotech Resources (FAIR Denmark)
+</div>
 </a>
+</div>
+
+</div>
