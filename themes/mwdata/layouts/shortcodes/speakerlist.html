@@ -1,6 +1,9 @@
 {{- $speakerfilter := .Get "speakers" -}}
+{{- $speakerorder := .Get "order_by" -}}
 
-{{ range sort (where (where site.RegularPages.ByDate "Section" "speakers") "published" "!=" "false") ".Params.weight" ".Params.speaker_name" "asc" }}
+{{- $speakers := (where (where site.RegularPages.ByDate "Section" "speakers") "published" "!=" "false") -}}
+
+{{ range (sort $speakers $speakerorder ".Params.weight" ".Params.speaker_name" "asc") }}
 
 
 {{ if or (not $speakerfilter) (in $speakerfilter .File.ContentBaseName) }}

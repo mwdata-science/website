@@ -21,4 +21,4 @@ The purpose of the event is to provide participants with a basic Python knowledg
 
 ## Coaches
 
-{{< speakerlist speakers="jessica ralph amelia stanley" >}}
+{{< speakerlist speakers="jessica ralph amelia stanley" order_by=".Params.coach_weight" >}}

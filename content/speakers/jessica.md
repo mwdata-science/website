@@ -4,6 +4,8 @@ speaker_name: "Jessica Upani"
 img_name: "jessica.jpeg"
 published: true
 weight: 40
+coach_weight: 1
+twitter: JessicaUpani
 ---
 
 

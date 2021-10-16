@@ -5,6 +5,7 @@ img_name: "amelia.jpeg"
 published: true
 weight: 10
 twitter: "AT_poly_AI"
+coach_weight: 4
 ---
 
 Amelia Taylor (PhD) is a lecturer in Artificial Intelligence at the University of Business and Applied Sciences (MUBAS) – former University of Malawi, The Polytechnic. She teaches Artificial Intelligence, Computational Intelligence and programming modules. In addition, she teaches and supervises MSc and PhD students. She was the internal supervisor of the first graduate of the PhD program run by the university. She is currently leading the development of MSc programs in the Computing and Information technology department. Dr Taylor is currently conducting research in Natural Language Processing, AI for Legal text and data mining and visualisation for health data. She is the main organiser of IndabaX Malawi, a machine learning conference in Malawi.

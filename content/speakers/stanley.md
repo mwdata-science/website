@@ -4,6 +4,7 @@ speaker_name: "Stanley Ndebvu"
 img_name: "stanley.jpeg"
 published: true
 weight: 10
+coach_weight: 3
 ---
 
 
