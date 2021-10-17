@@ -1,9 +1,10 @@
 ---
-title: "Richard Munthali"
-speaker_name: "Richard Munthali"
+title: "Richard J Munthali"
+speaker_name: "Richard J Munthali"
 img_name: "rmunthali.jpeg"
 published: true
 weight: 80
+twitter: RichardMunthali
 ---
 
 Dr. Richard Munthali is a Statistician at the Wits Reproductive Health and HIV Institute (WRHI), Wits University and an independent data scientist/analyst consultant. He completed a PhD in Bioinformatics from University of the Witwatersrand in 2017. Dr Munthali's PhD research focused on longitudinal genetic risk factors of obesity in African populations. He did spend some time at the University of Cambridge, UK and Emory University, USA as a visiting PhD researcher under different fellowships. Dr Munthali also holds an MSc in Mathematical Science from Stellenbosch University, South Africa and did his undergraduate studies in Mathematical Sciences Education (Statistics and Computing) at the Polytechnic under the University of Malawi.

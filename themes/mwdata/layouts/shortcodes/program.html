@@ -21,7 +21,9 @@
 
 <h1>{{ .Params.title }}</h1>
 <h5>{{ .Params.program_slot }} ({{ .Params.program_type }})</h5>
-<h5>{{ $speaker.Params.speaker_name }}</h5>
+<h5>{{ $speaker.Params.speaker_name }}{{ if $speaker.Params.twitter }}
+<a href="https://twitter.com/{{ $speaker.Params.twitter }}" target="_blank">🐦 @{{ $speaker.Params.twitter }}</a>
+{{ end }}</h5>
 
 
 {{ if .Content }}
