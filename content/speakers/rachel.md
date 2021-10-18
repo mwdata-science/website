@@ -4,6 +4,7 @@ speaker_name: "Rachel Sibande"
 img_name: "rachel.jpeg"
 published: true
 weight: 80
+twitter: RachelSibande
 ---
 
 Rachel is Senior Director at the United Nations Foundation. She leads Big Data, Artificial Intelligence, Machine Learning for development projects  and Digital Transformation work in Africa.
