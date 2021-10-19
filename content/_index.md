@@ -206,6 +206,24 @@ Department of Computer Science - Copenhagen University
 </div>
 
 <div class="sponsor-card">
+<a href="https://www.python.org/psf-landing/" target="_blank" class="sponsor">
+<div class="sponsor-img">
+{{< imgProc
+img="logo-psf.png"
+command="Fit"
+options="400x200"
+alt="Python Software Foundation"
+class="img-sponsor"
+>}}
+</div>
+<div class="sponsor-card-text">
+Python Software Foundation
+</div>
+</a>
+
+</div>
+
+<div class="sponsor-card">
 <a href="https://www.djangoproject.com/foundation/" target="_blank" class="sponsor">
 <div class="sponsor-img">
 {{< imgProc
