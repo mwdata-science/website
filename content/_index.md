@@ -259,6 +259,24 @@ Django Denmark
 
 </div>
 
+<div class="sponsor-card">
+<a href="https://www.cydmalawi.org/" target="_blank" class="sponsor">
+<div class="sponsor-img">
+{{< imgProc
+img="logo-cyd.png"
+command="Fit"
+options="400x200"
+alt="Center for Youth and Development"
+class="img-sponsor"
+>}}
+</div>
+<div class="sponsor-card-text">
+Center for Youth and Development
+</div>
+</a>
+
+</div>
+
 
 <div class="sponsor-card">
 <a href="https://www.fairdanmark.dk/en/" target="_blank" class="sponsor">
