@@ -99,3 +99,19 @@ footer {
 {{- define "og_image" -}}
 {{ (printf "/static/some/%s.png" .File.ContentBaseName) | absURL }}
 {{- end -}}
+
+{{- define "description" -}}
+{{ .Summary | truncate 200 }}
+{{- end -}}
+
+{{- define "og_description" -}}
+{{ .Summary | truncate 200 }}
+{{- end -}}
+
+{{- define "itemprop_description" -}}
+{{ .Summary | truncate 200 }}
+{{- end -}}
+
+{{- define "twitter_description" -}}
+{{ .Summary | truncate 200 }}
+{{- end -}}
