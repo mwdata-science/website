@@ -4,15 +4,10 @@
 {{- $new := "" -}}
 {{- $new = $original.Fill "300x300" -}}
 
-<h1>{{ .Title | markdownify }}</h1>
 <img src="{{ $new.Permalink }}" alt="Speaker" class="img-speaker float-right" />
-<h5>
-{{ .Params.speaker_name }}
+<h1>{{ .Title | markdownify }}</h1>
 
-
-</h5>
-
-<p>
+<p class="speaker-some">
 {{ if .Params.twitter }}
 <a href="https://twitter.com/{{ .Params.twitter }}" target="_blank">🐦 @{{ .Params.twitter }}</a>
 {{ end }}
@@ -21,11 +16,16 @@
 {{ end }}
 </p>
 
-{{ .Content }}
+<div class="speaker-text">
+
+{{ .Content | truncate 275 }}
+
+</div>
 
 <div style="clear: both"></div>
 
 
+<div class="program-entries">
 <h3>Program entries</h3>
 
 
@@ -44,23 +44,58 @@
 
 {{else}}
 
-<em>No program entries found - we are still working on the program.</em>
+<em>No program entries found.</em>
 
 {{ end }}
+</div>
 
+<style media="none">
+
+.program-entries,
+nav,
+footer > *,
+.speaker-some
+{
+  display: none
+}
+
+.mwdata-logo img {
+  height: 75px;
+}
+
+
+.speaker-text p {
+  font-size: 150%;
+}
+
+body {
+height: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%
+}
+
+.container {
+
+}
+
+</style>
 
 {{ end }}
 
 
 
 {{- define "twitter_image" -}}
-{{ "/static/some_preview.png" | absURL }}
+{{ (printf "/static/some/%s.png" .File.ContentBaseName) | absURL }}
 {{- end -}}
 
 {{- define "itemprop_image" -}}
-{{ "/static/some_preview.png" | absURL }}
+{{ (printf "/static/some/%s.png" .File.ContentBaseName) | absURL }}
 {{- end -}}
 
 {{- define "og_image" -}}
-{{ "/static/some_preview.png" | absURL }}
+{{ (printf "/static/some/%s.png" .File.ContentBaseName) | absURL }}
 {{- end -}}
