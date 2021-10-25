@@ -1,5 +1,5 @@
 ---
-title: "Practical Session on Support Vector Machines and Random Forest"
+title: "Practical session on support vector machines and random forest"
 speaker: tiwonge
 published: true
 weight: 2

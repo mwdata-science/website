@@ -1,5 +1,5 @@
 ---
-title: "Linear Regression for Machine Learning"
+title: "Linear regression for machine learning"
 speaker: winnie
 published: true
 weight: 1

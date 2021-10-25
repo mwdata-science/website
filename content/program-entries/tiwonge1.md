@@ -1,5 +1,5 @@
 ---
-title: "Support Vector Machines and Random Forest"
+title: "Support vector machines and random forest"
 speaker: tiwonge
 published: true
 weight: 2

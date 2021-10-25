@@ -1,5 +1,5 @@
 ---
-title: "Big Data for Development Use cases"
+title: "Big data for development use cases"
 speaker: rachel
 published: true
 weight: 1

@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Big Data"
+title: "Introduction to big data"
 speaker: michael
 published: true
 weight: 1

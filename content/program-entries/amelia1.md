@@ -1,5 +1,5 @@
 ---
-title: "The Importance of Datasets for Machine Learning and Data Science"
+title: "The importance of datasets for machine learning and data science"
 speaker: amelia
 published: true
 weight: 1

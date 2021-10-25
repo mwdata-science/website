@@ -1,5 +1,5 @@
 ---
-title: "Basic Machine Learning Algorithms and their application"
+title: "Basic machine learning algorithms and their application"
 speaker: akuzike
 published: true
 weight: 1

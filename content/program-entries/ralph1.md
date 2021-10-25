@@ -1,5 +1,5 @@
 ---
-title: "Web Scraping for Data Science"
+title: "Web scraping for data science"
 speaker: ralph
 published: true
 weight: 2

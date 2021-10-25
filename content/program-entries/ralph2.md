@@ -1,5 +1,5 @@
 ---
-title: "Practical Session on web scraping"
+title: "Practical session on web scraping"
 speaker: ralph
 published: true
 weight: 3
