@@ -3,8 +3,8 @@ title: "Introduction to big data"
 speaker: michael
 published: true
 weight: 1
-program_slot: "Day 4, 10:30-12:00 am"
-program_type: "lecture"
+program_slot: "Day 5, 08:30-12:00 am"
+program_type: "lecture and exercises"
 description: "From 1956 to 2021, while capacity per unit volume has increased 200 billion times, throughput has increased only 20 thousand times, and latency a mere 150 times. This logarithmic discrepancy..."
 ---
 

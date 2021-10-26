@@ -3,7 +3,7 @@ title: "Big data for development use cases"
 speaker: rachel
 published: true
 weight: 1
-program_slot: "Day 5, 08:30-09:40 am"
+program_slot: "Day 4, 10:00-11:30 am"
 program_type: "lecture and exercises"
 description: "This Lecture will delve into real practical examples of how Big Data has been applied in real life. The Lecture will highlight diverse use cases in health, food sec..."
 ---
