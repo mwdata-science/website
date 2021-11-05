@@ -22,6 +22,19 @@ Events will take place at [Mzuzu University's new Open Distance Learning](/venue
 
 #### Updates
 
+📢 **November 5th 2021** - A successful Bootcamp  📢
+
+We wish to thank everyone involved in making this a successful and memorable event.
+The organizing team is gathering feedback from all participants and facilitators.
+You may find moments of the two weeks captured on [our Twitter account](https://twitter.com/mwdatabootcamp)
+and we hope that everyone involved will wish to continue to stay in touch on our
+social platforms - any reflections are also most welcome to be shared with us on
+[info@mwdata.science](mailto:info@mwdata.science)
+
+We will return with a report-back and a to share a vision for more Data Science
+and Python community events in Malawi.
+
+
 📢 **October 11th 2021** - Program taking shape  📢
 
 We have started to add entries to the programs. Please see the two menu items above in the main menu 🆙
