@@ -116,6 +116,8 @@ special prize!
   {{ $style := $sass | resources.ToCSS | resources.Minify }}
   <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
+  <link rel="stylesheet" href="{{ "static/css/ekko-lightbox.css" | absURL }}" />
+
   {{ if .IsHome }}
     {{ $homepage := "Home" }}
     {{ with .Site.Menus.nav }}
@@ -170,7 +172,10 @@ special prize!
     </div>
 </footer>
 
-  {{ partial "bootstrap-js.html" . }}
+  <script src="{{ "static/js/jquery-3.6.0.min.js" | absURL }}"></script>
+  <script src="{{ "static/js/bootstrap.min.js" | absURL }}"></script>
+  <script src="{{ "static/js/ekko-lightbox.min.js" | absURL }}"></script>
+  <script src="{{ "static/js/mwdata.js" | absURL }}"></script>
 </body>
 
 </html>

@@ -1,0 +1,27 @@
+{{- $command := .Get "command" -}}
+{{- $options := .Get "options" -}}
+{{- $alt := .Get "alt" -}}
+{{- $class := "img-thumbnail" -}}
+{{- $page := (.Site.GetPage (.Get "page")) -}}
+
+{{ range $index, $num := (seq 1 (.Get "count")) }}
+
+  {{- $original := $page.Resources.GetMatch (printf "photo-%d.jpg" $num) -}}
+
+  {{- $new := "" -}}
+
+  {{- if eq $command "Fit"}}
+    {{- $new = $original.Fit $options -}}
+  {{- else if eq $command "Resize"}}
+    {{- $new = $original.Resize $options -}}
+  {{- else if eq $command "Fill"}}
+    {{- $new = $original.Fill $options -}}
+  {{- else -}}
+    {{- errorf "Invalid image processing command: Must be one of Fit, Fill or Resize."}}
+  {{- end -}}
+
+  <a href="{{ $original.Permalink }}" data-toggle="lightbox" data-gallery="example-gallery">
+    <img src="{{ $new.Permalink }}" alt="{{ $alt }}" class="{{ $class }}"/>
+  </a>
+
+{{ end }}
