@@ -6,18 +6,63 @@ draft: false
 identifier: "main"
 ---
 
-# Welcome!
+# Thank you!
 
-Malawi Data Science Bootcamp 2021 is the first of its kind in Malawi: For a whole week, regional experts, young talents and international guests are meeting around the subject of Data Science.
+Malawi Data Science Bootcamp 2021 concluded with 2 successful weeks. It was the first of its kind in Malawi: For a whole week, regional experts, young talents and international guests met around the subject of Data Science.
 
-In the lead-up to the **Data Science Bootcamp**, a week of tutorials in Python and Data Science takes place, the **Python Week of Code**.
+In the lead-up to the **Data Science Bootcamp**, a week of tutorials in Python and Data Science took place, the **Python Week of Code**.
 
-# When and where
+This website is now archived but we would like to share a few results.
 
-* Week 1: October 18-22 Python Week of Code - [Program »](/python-week-of-code/)
-* Week 2: October 25-29 Data Science Bootcamp - [Program »](/program/)
+## Organizers: Look-back at 2021
 
-Events will take place at [Mzuzu University's new Open Distance Learning](/venue/) facility in **Lilongwe, Malawi**. Accommodation will be offered in the nearby surroundings, making it a comfortable, fun and productive stay for everyone involved.
+The organizing team is proud to have conducted a successful event and very thankful to all the facilitators that came out to make this happen through two weeks of intense activity. Both events had greater participation demand than seats available, and we want to thank everyone who sent in a registration.
+
+**Week 1: Python Week of Code** had 74 registrations and we were able to finally fit 49 participants. 3 people were teaching, and an additional 2 people helped to coach.
+
+**Week 2: Python Week of Code** had exactly 100 registrations and we were able to finally fit 55 participants, with 10 facilitators splitting the 5 days.
+
+*Scroll further down for photos from both weeks*
+
+## Big support for another event
+
+We did a post-evaluation with the Week 2 participants and the responses were overwhelming. 100% of respondents said that the contents had been relevant to their professional work, and 97% said that that the bootcamp either met their expectations with 3% "maybe". We did see that the hybrid format with some remote facilitators had a negative impact on the engagement and interaction, with at least 16% of participants lacking participation to some degree. We want to thank everyone who responded, as there were a lot of great inputs that we will take with us for future events.
+
+> Continue engaging participants for sustainability
+
+> I am thinking that for this event to be vibrant I think there is a need to increase the intake.
+
+> Yes we should meet regularly
+
+> We should meet every year and reguraly to improve our network
+
+> Days should be increased to at least a month
+
+> this should be a routine at least three or four times per year
+
+> You may consider including projects that participants (i.e. in groups) can continue working on after the training. These should be projects that may even lead to publications.
+
+> Adjust the period for the bootcamp as it has shown that the one week is not enough
+
+> is there any possibility of having it annually?
+
+> Next time it should be two to four weeks
+
+> Make more of these. As a country, Malawi needs a network of such talented individuals interacting towards common goals.
+
+## Organizers' takeaways
+
+During both events, all participants were given access to a common chat platform, a self-hosted [Matrix](https://matrix.org/) instance. This worked quite well, a total of 71 participants signed up. Because the platform was new to most, people had to spend some time becoming familiar and in some cases also fetching an Android client. A self-hosted platform gave us free hands to safely share photos and exercises, but in the future we should seek to capitalize more on having our own instance. The Matrix instance is still up and running, such that participants can continue to network (please feel free!) and for future events to continue.
+
+The COVID pandemic put a considerable strain on organizing. We moved our dates several times and had many discussions related to restrictions of travel which was preventing abroad participation, both for facilitators and participants. COVID regretfully became the direct reason for 4 facilitators' cancellations, 3 of which would have traveled from abroad. Although we see that the engagement took a hit from the fatigue of perhaps 1-2 too many remote lectures, we also gained valuable experience from the setup and feel optimistic that it can be made use of in the future.
+
+The [venue](/venue/) worked very well and was temporarily equipped with extra broadband. Participants and facilitators were able to engage during breaks and the end of the event featured a social dinner, which most chose to attend. We were very happy to see the energy to gather and share beyond the scheduled lectures and tutorials.
+
+We organized this event through 37+ online meetings. The meetings coordinated structure, program, grant proposals, budgets, communication, website and more. We had a great experience through these meetings, many of which occurred in a fixed weekly series. In a future scenario, we could expect to repeat this.
+
+A digital infrastructure was also setup in order to manage registration and mass-communication with participants. During this, we had a lot of problems with emailing: Firstly, our email host (a paid service) refused to let us send out emails to 40+ people simultaneously and suspended our account. We then tried other providers but faced a similar series of odd verification processes that halted our efforts. Finally, we decided to setup our own (free) SMTP instance and a self-made form for emailing participants with information leading up to the event. This whole setup remains intact for a future event.
+
+We have learned much from this and are eager to repeat our experiences and share with others. If you are interested in participating in a future organizing group, you are most welcome to write us [info@mwdata.science](mailto:info@mwdata.science) describing your motivation and previous experiences in event organizing or data science.
 
 ## Photos: Week 1
 
@@ -42,7 +87,19 @@ page="/week2-photos"
 count=49
 >}}
 
+# When and where
+
+* Week 1: October 18-22 Python Week of Code - [Program »](/python-week-of-code/)
+* Week 2: October 25-29 Data Science Bootcamp - [Program »](/program/)
+
+Events will take place at [Mzuzu University's new Open Distance Learning](/venue/) facility in **Lilongwe, Malawi**. Accommodation will be offered in the nearby surroundings, making it a comfortable, fun and productive stay for everyone involved.
+
+
 #### Updates
+
+📢 **January 20th 2022** - Website archived, next event?  📢
+
+This website is now archived. At the top of this front page is a statement from the organizers, look both backwards at 2021 and forwards to its successor.
 
 📢 **November 5th 2021** - A successful Bootcamp  📢
 
