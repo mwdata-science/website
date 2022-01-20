@@ -12,7 +12,7 @@ Malawi Data Science Bootcamp 2021 concluded with 2 successful weeks. It was the 
 
 In the lead-up to the **Data Science Bootcamp**, a week of tutorials in Python and Data Science took place, the **Python Week of Code**.
 
-This website is now archived but we would like to share a few results.
+This website is now archived: You can find all the original contents, and we have added a recap of the event, which you can read below ⬇️.
 
 ## Organizers: Look-back at 2021
 
