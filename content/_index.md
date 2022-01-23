@@ -20,7 +20,7 @@ The organizing team is proud to have conducted a successful event and very thank
 
 **Week 1: Python Week of Code** had 74 registrations and we were able to finally fit 49 participants. 3 people were teaching, and an additional 2 people helped to coach.
 
-**Week 2: Python Week of Code** had exactly 100 registrations and we were able to finally fit 55 participants, with 10 facilitators splitting the 5 days.
+**Week 2: Malawi Data Science Bootcamp** had exactly 100 registrations and we were able to finally fit 55 participants, with 10 facilitators splitting the 5 days.
 
 *Scroll further down for photos from both weeks*
 
