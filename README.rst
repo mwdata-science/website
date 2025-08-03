@@ -25,3 +25,15 @@ To download and install Hugo on Ubuntu/Debian, use the following commands::
 You can install and run Hugo on other systems, too, see their `list of releases <https://github.com/gohugoio/hugo/releases/download/>`__
 
 After installing Hugo, you can view the site on your local laptop, by running the command ``hugo server`` directly in the root folder of this repository.
+
+Other notes
+-----------
+
+Massmail
+~~~~~~~~
+
+The Django project contains a 'massmail' feature to send out mails to all participants. It requires a cronjob:
+
+```
+*/5 * * * * /home/mwdata/.virtualenvs/venv/bin/python /var/www/website/django_site/manage.py massmail --traceback >> $HOME/massmail.log 2>&1
+```
